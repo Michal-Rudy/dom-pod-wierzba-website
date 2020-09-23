@@ -11,44 +11,55 @@
 
   <body>
     <main class="main">
-      <header class="header">
-        <!--<nav>
-        <ul>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-          <li><a href="#">link</a></li>
-        </ul>
-      </nav>-->
-        <h1>Page Title</h1>
+      <header class="main-header">
+        <div class="main-header__logo">
+          <img
+            src="/images/logo-dom-pod-wierzba.jpg"
+            alt="pod pod wierzbą logotyp"
+          />
+        </div>
+        <button class="hamburger hamburger--js" aria-label="otwórz menu">
+          MENU
+        </button>
+        <nav class="navigation navigation--js">
+          <ul>
+            <li><a class="navigation__link" href="index.html">Home</a></li>
+            <li><a class="navigation__link" href="#offer">Oferta</a></li>
+            <li>
+              <a class="navigation__link" href="lgd-dobra-widawa.html"
+                >LGD Dobra Widawa</a
+              >
+            </li>
+
+            <li><a class="navigation__link" href="#contact">Kontakt</a></li>
+
+          </ul>
+        </nav>
       </header>
 
-      <article class="article">
-        <header>
-          <h2>Article Title</h2>
-        </header>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          dolorem illo voluptatem doloremque asperiores incidunt eius similique
-          quae excepturi iure fugit quasi ex officiis quia ad, cupiditate eaque
-          adipisci iusto.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          dolorem illo voluptatem doloremque asperiores incidunt eius similique
-          quae excepturi iure fugit quasi ex officiis quia ad, cupiditate eaque
-          adipisci iusto.
-        </p>
-      </article>
+      <section class="site-content">
+        <section class="slider">
+          <h1>Page Title</h1>
+        </section>
 
-      <aside class="aside">
-        <h2>Author info</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
-          dolorem illo voluptatem doloremque asperiores incidunt eius similique
-          quae excepturi iure fugit quasi ex officiis quia ad, cupiditate eaque
-          adipisci iusto.
-        </p>
-      </aside>
+        <section class="offer"></section>
+
+        <section class="fund-info">
+          <article class="fund-info__article">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
+              aliquam provident assumenda. Odio architecto voluptate quia
+              dolores, atque ad veniam laborum totam maxime dolor harum ea
+              adipisci eius obcaecati incidunt.
+            </p>
+          </article>
+        </section>
+
+        <section class="contact">
+          <img src="/images/Dom-Pod-Wierzba-paleta.png" alt="" />
+        </section>
+      </section>
+
       <footer class="footer">Copyright Info</footer>
     </main>
   </body>
