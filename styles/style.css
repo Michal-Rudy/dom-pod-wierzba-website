@@ -38,11 +38,14 @@ ul {
   justify-content: space-between;
   align-items: center;
   background: white;
+  padding: 0 80px;
 }
 
+.main-header__logo {
+  margin-left: 0px;
+}
 
 .navigation {
-  padding: 10px;
   display: none; }
 
 .navigation--open {
@@ -56,7 +59,9 @@ ul {
 .navigation__link {
   color: #D08C60;
   display: block;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  text-decoration: none;
+}
 
 .navigation__link:hover {
   color: #FFCB69; }
