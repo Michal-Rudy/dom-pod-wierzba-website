@@ -1,0 +1,25 @@
+{
+  "name": "dom-pod-wierzba-website",
+  "version": "1.0.0",
+  "description": "Website for Dom Pod Wierzbą",
+  "main": "index.js",
+  "scripts": {
+    "krowa": "cowsay Hello Motherfucker!",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michal-Rudy/dom-pod-wierzba-website.git"
+  },
+  "author": "Michał Rudy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michal-Rudy/dom-pod-wierzba-website/issues"
+  },
+  "homepage": "https://github.com/Michal-Rudy/dom-pod-wierzba-website#readme",
+  "devDependencies": {
+    "@codedrop/main-menu": "^0.1.29",
+    "cowsay": "^1.4.0"
+  },
+  "dependencies": {}
+}
