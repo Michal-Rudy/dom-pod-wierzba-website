@@ -37,8 +37,8 @@ ul {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  padding: 0 80px;
+  background: #797d62;
+  padding: 20px 80px;
 }
 
 .main-header__logo {
@@ -57,7 +57,7 @@ ul {
   right: 16px; }
 
 .navigation__link {
-  color: #D08C60;
+  color: #ffcb69;
   display: block;
   margin-bottom: 10px;
   text-decoration: none;

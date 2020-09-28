@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Michal-Rudy/dom-pod-wierzba-website#readme",
   "devDependencies": {
     "@codedrop/main-menu": "^0.1.29",
-    "cowsay": "^1.4.0"
+    "cowsay": "^1.4.0",
+    "node-sass": "^4.14.1"
   },
   "dependencies": {}
 }
