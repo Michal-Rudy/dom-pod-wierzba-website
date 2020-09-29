@@ -1,0 +1,226 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background: #57574b;
+    color: rgb(44, 43, 43);
+    /*display: flex;
+    align-items: center;
+    justify-content: center;*/
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navigation ul > li {
+    display: block;
+    float: left;
+    position: relative;
+  }
+  
+  .main {
+  }
+  
+  .main-header {
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background: #797d62;
+    padding: 20px 80px;
+  }
+  
+  .main-header__logo {
+    margin-left: 0px;
+  }
+  
+  .navigation {
+    display: none; }
+  
+  .navigation--open {
+    display: block; }
+  
+  .hamburger {
+    position: absolute;
+    top: 16px;
+    right: 16px; }
+  
+  .navigation__link {
+    color: #ffcb69;
+    display: block;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  .navigation__link:hover {
+    color: #FFCB69; }
+  
+  
+
+
+
+
+    
+    $min-width: 120px;
+    $maincolor: #6BBE92;  
+    $secondarycolor: #3E8760;
+    
+    @mixin transform($value){
+      -webkit-transform: ($value);
+         -moz-transform: ($value);
+          -ms-transform: ($value);
+              transform: ($value);
+    }
+    @mixin transition($value){
+      -webkit-transition: ($value);
+         -moz-transition: ($value);
+          -ms-transition: ($value);
+              transition: ($value);
+    }
+    
+    
+    #main-menu-ul{
+      position: relative;
+      list-style: none;
+      background: $maincolor;
+      font-weight: 400;
+      font-size: 0;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 0;
+      margin: 50px auto;
+      li{
+        font-size: 0.8rem;
+        display: inline-block;
+        position: relative;
+        padding: 15px 20px;
+        cursor: pointer;
+        z-index: 5;
+        min-width: $min-width;
+      }  
+    }
+    li{
+      margin: 0;
+    }
+    .main-menu-drop{
+        overflow: hidden;
+        list-style: none;
+        position: absolute;
+        padding: 0;
+        width: 100%;
+        left: 0;
+        top: 48px;
+        div{
+          @include transform(translate(0,-100%));
+          @include transition(all 0.5s 0.1s);
+          position: relative;
+        }
+        li{
+          display:block;
+          padding: 0;
+          width: 100%;
+          background: $secondarycolor !important;
+        }
+      }
+    #main-menu-marker{
+      height: 6px;
+      background: $secondarycolor !important;
+      position: absolute;
+      bottom: 0;
+      width: $min-width;
+      z-index: 2;
+      @include transition(all 0.35s);
+    }
+    
+    @for $i from 1 through 4{
+      #main-menu-ul li:nth-child(#{$i}){
+        &:hover ul div{
+         @include transform(translate(0,0)); 
+        }
+        &:hover ~ #main-menu-marker{
+          @include transform(translate(#{(-1+$i)*$min-width},0));
+        }
+      }    
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .main-content {
+    display: grid;
+    grid-template-columns: repeat (3, minmax(240px, 600px));
+    background: whitesmoke;
+  }
+  
+  .article {
+    grid-area: article;
+  }
+  
+  .aside {
+    grid-area: aside;
+    padding: 10px;
+    background: tomato;
+  }
+  
+  .footer {
+    grid-area: footer;
+  }
+  
+  @media screen and (min-width: 480px) {
+    .main {
+      
+    }
+    .aside {
+      padding: 20px;
+    }
+  
+    @media screen and (min-width: 768px) {
+      .main {
+       
+      }
+  
+      .navigation {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+  
+      .navigation__link {
+        margin-right: 20px; }
+      .hamburger {
+        display: none; }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px; } }
+  
+      .aside {
+        padding: 20px;
+      }
+  }
