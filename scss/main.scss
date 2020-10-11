@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&&family=Nunito+Sans:wght@300;600&display=swap");
 @import "scss/animista.scss";
 
-
 $backgroundcolor-green: #797d62;
 $backgroundcolor-green-brighter: #9b9b7a;
 $backgroundcolor-yellow-intense: #ffcb69;
@@ -13,22 +12,25 @@ $mainmenu-linkcolor: #ffcb69;
 $mainmenu-linkcolor-hover: #ffcb69;
 
 $buttoncolor: #ffcb69;
-$buttoncolor-hover: #ffcb69;
+$buttoncolor-hover: #ffe2ad;
 $buttoncolor-dark: #d08c60;
+$buttoncolor-dark-hover: #f1b48b;
 $buttoncolor-dark-text: #f1efe3;
 
 $happy-yellow: #ffb323;
 
 $textcolor-light: #f8e8cb;
 $textcolor-dark: #594437;
-
-
-
+$textcolor-white: #fcf8ef;
 
 $brownlight: #997b66;
+$browndarker: #5a4131;
+
+
 
 html {
   box-sizing: border-box;
+  line-height: 0;
 }
 
 *,
@@ -39,9 +41,12 @@ html {
 
 body {
   background: $backgroundcolor-green;
-  color: rgb(44, 43, 43);
+  color: $textcolor-light;
   min-height: 100vh;
   font-family: "Libre Baskerville", serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15em;
 }
 
 h2 {
@@ -70,6 +75,10 @@ button {
   margin: 40px 0;
 }
 
+button:hover {
+  background-color: $buttoncolor-hover;
+}
+
 .navigation ul {
   list-style: outside none none;
   margin: 0;
@@ -83,6 +92,7 @@ button {
 }
 
 .main {
+  overflow: hidden;
 }
 
 .top-header {
@@ -105,7 +115,6 @@ button {
     }
   }
 }
-
 
 .main-header {
   display: flex;
@@ -144,9 +153,9 @@ button {
     font-size: 16px;
     color: black;
   }
-  &--discreet { 
+  &--discreet {
     color: #d08c60;
-   }
+  }
 }
 
 .navigation__link:hover {
@@ -275,7 +284,6 @@ li {
   }
 }
 
-
 .about {
   background-color: $backgroundcolor-yellow;
   display: flex;
@@ -294,6 +302,11 @@ li {
   }
 }
 
+.testimonials {
+  margin: 0
+}
+
+
 .contact {
   background-color: $backgroundcolor-yellow-intense;
   padding: 100px 0 0;
@@ -304,6 +317,7 @@ li {
   &__heading {
     font-size: 32px;
     color: $textcolor-dark;
+    margin-bottom: 80px;
   }
   &__info {
     max-width: 800px;
@@ -343,6 +357,42 @@ li {
     border-radius: 3px;
     background-color: $buttoncolor-dark;
     color: $buttoncolor-dark-text;
+  }
+  &__button:hover {
+    background-color: $buttoncolor-dark-hover;
+  }
+}
+
+.fund-info {
+  background-color: $backgroundcolor-brown-light;
+  padding: 120px 0; 
+  text-align: center;
+
+  &__heading {
+  }
+  &__image {
+  }
+  &__text {
+    max-width: 800px;
+    color: $textcolor-white;
+    font-size: 0.8em;
+    margin: 0 auto 20px;
+
+  }
+}
+
+
+
+.footer {
+  background-color: $browndarker;
+  padding: 120px 0; 
+  text-align: center;
+
+  &__text {
+    max-width: 800px;
+    color: $textcolor-white;
+    font-size: 1em;
+    margin: 0 auto 20px;
   }
 }
 
