@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Simple Web Template</title>
+    <title>Dom Pod Wierzbą</title>
 
     <link href="/styles/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/styles/style.css" rel="stylesheet" type="text/css" />
@@ -11,6 +11,19 @@
 
   <body>
     <main class="main">
+      <header class="top-header">
+        <a
+          class="top-header__link top-header__link--mail"
+          href="mailto:joanna@dompodwierzba.pl"
+          >joanna@dompodwierzba.pl</a
+        >
+        <a
+          class="top-header__link top-header__link--tel"
+          href="tel:+48730700277"
+          >+48 730 700 277</a
+        >
+      </header>
+
       <header class="main-header">
         <div class="main-header__logo">
           <img
@@ -22,81 +35,194 @@
           MENU
         </button>
         <nav class="navigation navigation--js">
-         
           <ul id="main-menu-ul">
             <li><a class="navigation__link" href="index.html">Home</a></li>
-            <li><a class="navigation__link" href="#offer">Oferta</a>
+            <li>
+              <a class="navigation__link" href="#offer">Oferta</a>
               <ul class="main-menu-drop">
                 <div>
-                <li><a class="navigation__link--drop" href="#offer">Wypoczynek z Nordic Walking</a></li>
-                <li><a class="navigation__link--drop" href="#offer">Terapia holistyczna</a></li>
-                <li><a class="navigation__link--drop" href="#offer">Akupunktura</a></li>
-                <li><a class="navigation__link--drop" href="#offer">Warsztaty</a></li>
+                  <li>
+                    <a class="navigation__link--drop" href="#offer"
+                      >Wypoczynek z Nordic Walking</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navigation__link--drop" href="#offer"
+                      >Terapia holistyczna</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navigation__link--drop" href="#offer"
+                      >Akupunktura</a
+                    >
+                  </li>
+                  <li>
+                    <a class="navigation__link--drop" href="#offer"
+                      >Warsztaty</a
+                    >
+                  </li>
                 </div>
               </ul>
             </li>
+            <li><a class="navigation__link" href="#contact">Kontakt</a></li>
             <li>
-              <a class="navigation__link" href="lgd-dobra-widawa.html"
+              <a
+                class="navigation__link navigation__link--discreet"
+                href="lgd-dobra-widawa.html"
                 >LGD Dobra Widawa</a
               >
             </li>
-
-            <li><a class="navigation__link" href="#contact">Kontakt</a></li>
             <div id="main-menu-marker"></div>
           </ul>
-
-
         </nav>
       </header>
 
       <section class="site-content">
-        
         <section class="slider">
-          <img src="/images/slide-03-napis.jpg" alt="Domu pod Wierzbą">
+          <img src="/images/slide-03.jpg" alt="Domu pod Wierzbą" />
         </section>
 
         <section class="offer">
           <article class="offer-article">
             <header class="offer-article__header">
-              <h2 class="offer-article__heading focus-in-contract-bck">Wypoczynek z Nordic Walking</h2>
-              <img class="offer-article__thumb" src="/images/nordic-walking-thumb-dom-pod-wierzba.jpg" alt="Nordic Walking w Domu Pod Wierzbą">
+              <h2 class="offer-article__heading">
+                Wypoczynek z Nordic Walking
+              </h2>
+              <img
+                class="offer-article__thumb"
+                src="/images/oferta-glowna-nordic-walking.jpg"
+                alt="Nordic Walking w Domu Pod Wierzbą"
+              />
             </header>
-            <p class="offer-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi porro iste excepturi! Voluptate numquam quasi veritatis similique distinctio iure optio minima autem est, corporis ab laudantium excepturi possimus quam deleniti!</p>
-            <button class="offer-article__button"></button>
+            <p class="offer-article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              porro iste excepturi! Voluptate numquam quasi veritatis similique
+              distinctio iure optio minima autem est, corporis ab laudantium
+              excepturi possimus quam deleniti!
+            </p>
+            <button class="offer-article__button">więcej</button>
           </article>
-        
+
           <article class="offer-article offer-article--even">
             <header class="offer-article__header">
-              <h2 class="offer-article__heading focus-in-contract-bck">Terapia holistyczna</h2>
-              <img class="offer-article__thumb" src="/images/nordic-walking-thumb-dom-pod-wierzba.jpg" alt="Nordic Walking w Domu Pod Wierzbą">
+              <img
+                class="offer-article__thumb"
+                src="/images/oferta-glowna-nordic-walking.jpg"
+                alt="Nordic Walking w Domu Pod Wierzbą"
+              />
+              <h2 class="offer-article__heading">Terapia holistyczna</h2>
             </header>
-            <p class="offer-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi porro iste excepturi! Voluptate numquam quasi veritatis similique distinctio iure optio minima autem est, corporis ab laudantium excepturi possimus quam deleniti!</p>
-            <button class="offer-article__button"></button>
+            <p class="offer-article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              porro iste excepturi! Voluptate numquam quasi veritatis similique
+              distinctio iure optio minima autem est, corporis ab laudantium
+              excepturi possimus quam deleniti!
+            </p>
+            <button class="offer-article__button">więcej</button>
           </article>
 
           <article class="offer-article">
             <header class="offer-article__header">
-              <h2 class="offer-article__heading focus-in-contract-bck">Akupunktura</h2>
-              <img class="offer-article__thumb" src="/images/nordic-walking-thumb-dom-pod-wierzba.jpg" alt="Nordic Walking w Domu Pod Wierzbą">
+              <h2 class="offer-article__heading focus-in-contract-bck">
+                Akupunktura
+              </h2>
+              <img
+                class="offer-article__thumb"
+                src="/images/oferta-glowna-akupunktura.jpg"
+                alt="Akupunktura w Domu Pod Wierzbą"
+              />
             </header>
-            <p class="offer-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi porro iste excepturi! Voluptate numquam quasi veritatis similique distinctio iure optio minima autem est, corporis ab laudantium excepturi possimus quam deleniti!</p>
-            <button class="offer-article__button"></button>
+            <p class="offer-article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              porro iste excepturi! Voluptate numquam quasi veritatis similique
+              distinctio iure optio minima autem est, corporis ab laudantium
+              excepturi possimus quam deleniti!
+            </p>
+            <button class="offer-article__button">więcej</button>
           </article>
-        
         </section>
 
         <section class="about">
           <article class="about-article">
             <header class="about-article__header">
               <h2 class="about-article__heading">O domu...</h2>
-              <img class="about-article__thumb" src="/images/o-domu-asia-szypula-dom-pod-wierzba.jpg" alt="Joanna Szypuła">
-              <img class="about-article__thumb" src="/images/o-domu-grupa-warsztatowa-dom-pod-wierzba.jpg" alt="Grupa warsztatowa">
-              <img class="about-article__thumb" src="/images/o-domu-ludzie-pod-wierzba.jpg" alt="Ludzie pod wierzbą">
+              <img
+                class="about-article__image"
+                src="/images/o-domu-asia-szypula-dom-pod-wierzba.jpg"
+                alt="Joanna Szypuła"
+              />
+              <img
+                class="about-article__image"
+                src="/images/o-domu-grupa-warsztatowa-dom-pod-wierzba.jpg"
+                alt="Grupa warsztatowa"
+              />
+              <img
+                class="about-article__image"
+                src="/images/o-domu-ludzie-pod-wierzba.jpg"
+                alt="Ludzie pod wierzbą"
+              />
             </header>
-            
-            <p class="about-article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi porro iste excepturi! Voluptate numquam quasi veritatis similique distinctio iure optio minima autem est, corporis ab laudantium excepturi possimus quam deleniti!</p>
+
+            <p class="about-article__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+              porro iste excepturi! Voluptate numquam quasi veritatis similique
+              distinctio iure optio minima autem est, corporis ab laudantium
+              excepturi possimus quam deleniti!
+            </p>
             <button class="about-article__button"></button>
           </article>
+        </section>
+
+        <section class="testimonials">
+          <img
+            src="/images/testimonials-na-glownej-background.jpg"
+            alt="opinie klientów"
+          />
+        </section>
+
+        <section class="contact">
+          <header class="contact__header">
+            <h2 class="contact__heading">Kontakt i dojazd</h2>
+          </header>
+          
+          <div class="contact__info">
+            
+            <div class="contact__col1">
+            <img
+                class="about-article__image"
+                src="/images/o-domu-asia-szypula-dom-pod-wierzba.jpg"
+                alt="Joanna Szypuła"
+              />
+          </div>
+
+            <div class="contact__col2">
+              <p class="contact__text">DOM POD WIERZBĄ<br/>
+              ul. Główna 34 Brzezinki<br/>
+              55-220 Jelcz-Laskowice
+              </p>
+              <p><a class="contact__link" href="mailto:joanna@dompodwierzba.pl"
+              >joanna@dompodwierzba.pl</a
+            ></p>
+              <p><a class="contact__link contact__link--expose" href="tel:+48730700277">+48 730 700 277</a></p>
+            </div>
+            
+            <div class="contact__col3">
+              <button class="contact__button">więcej informacji</button>
+            </div>
+          </div>
+
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5474.418497874753!2d17.3578251416299!3d51.09464046085866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe0261f926645%3A0x30ffb978d5e26f85!2sG%C5%82%C3%B3wna%2034%2C%2055-220%20Brzezinki!5e1!3m2!1spl!2spl!4v1601482962767!5m2!1spl!2spl"
+              width="1920"
+              height="600"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen=""
+              aria-hidden="false"
+              tabindex="0"
+            ></iframe>
+          </div>
         </section>
 
         <section class="fund-info">
@@ -108,10 +234,6 @@
               adipisci eius obcaecati incidunt.
             </p>
           </article>
-        </section>
-
-        <section class="contact">
-          <img src="/images/Dom-Pod-Wierzba-paleta.png" alt="" />
         </section>
       </section>
 
