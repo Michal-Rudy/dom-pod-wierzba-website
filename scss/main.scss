@@ -26,8 +26,6 @@ $textcolor-white: #fcf8ef;
 $brownlight: #997b66;
 $browndarker: #5a4131;
 
-
-
 html {
   box-sizing: border-box;
   line-height: 0;
@@ -44,8 +42,19 @@ body {
   color: $textcolor-light;
   min-height: 100vh;
   font-family: "Libre Baskerville", serif;
+  
+  background-image: url("/images/body-background-dom-pod-wierzba.jpg");
+  background-attachment: fixed;
+  background-position: 0 0px;
+  background-repeat: no-repeat;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.15em;
 }
 
@@ -73,6 +82,7 @@ button {
   font-weight: bold;
   padding: 20px 60px;
   margin: 40px 0;
+  cursor: pointer;
 }
 
 button:hover {
@@ -108,10 +118,10 @@ button:hover {
     margin-right: 20px;
     font-size: 14px;
     &--mail::before {
-      content: "mail: ";
+      content: "";
     }
     &--tel::before {
-      content: "tel: ";
+      content: "";
     }
   }
 }
@@ -125,9 +135,10 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   background: $backgroundcolor-green;
+  opacity: 0.93;
   padding: 0 80px;
   -webkit-transition: all 0.4s ease;
- 	transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .shrink-and-sticky {
@@ -137,6 +148,17 @@ button:hover {
   background: $browndarker;
 }
 
+.main-header__logo {
+  height: 100%;
+  margin-left: 0;
+  margin-top: 34px;
+}
+
+.shrink-and-sticky .main-header__logo {
+  height: 60px;
+  margin-top: 6px;
+}
+
 .shrink-and-sticky .main-header__logo-img {
   height: 90%;
 }
@@ -144,13 +166,6 @@ button:hover {
 .shrink-and-sticky .navigation__link {
   font-size: 15px;
 }
-
-.main-header__logo {
-  margin-left: 0;
-  height: 100%;
-}
-
-
 
 .navigation {
   display: none;
@@ -269,10 +284,27 @@ li {
 }
 
 .slider {
-  overflow: hidden;
+  min-height: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__header {
+    text-align: center;
+  }
+  
+  &__heading2 {
+    font-size: 4.5em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  &__heading3 {
+    font-size: 3.7em;
+    margin-top: 12px;
+  }
 }
 
 .offer {
+  background-color: $backgroundcolor-green;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 600px));
   column-gap: 20px;
@@ -325,9 +357,8 @@ li {
 }
 
 .testimonials {
-  margin: 0
+  margin: 0;
 }
-
 
 .contact {
   background-color: $backgroundcolor-yellow-intense;
@@ -387,7 +418,7 @@ li {
 
 .fund-info {
   background-color: $backgroundcolor-brown-light;
-  padding: 120px 0; 
+  padding: 120px 0;
   text-align: center;
 
   &__heading {
@@ -399,15 +430,12 @@ li {
     color: $textcolor-white;
     font-size: 0.8em;
     margin: 0 auto 20px;
-
   }
 }
 
-
-
 .footer {
   background-color: $browndarker;
-  padding: 120px 0; 
+  padding: 120px 0;
   text-align: center;
 
   &__text {
@@ -417,9 +445,6 @@ li {
     margin: 0 auto 20px;
   }
 }
-
-
-
 
 @media screen and (min-width: 480px) {
   .main {

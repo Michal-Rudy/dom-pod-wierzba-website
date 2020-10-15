@@ -7,28 +7,35 @@
 
     <link href="/styles/normalize.css" rel="stylesheet" type="text/css" />
     <link href="/styles/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/9eaa68d1c9.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <main class="main">
+      
+      <?php 
+      include 'main-header.php';
+      ?>
+
       <header class="top-header">
         <a
           class="top-header__link top-header__link--mail"
           href="mailto:joanna@dompodwierzba.pl"
-          >joanna@dompodwierzba.pl</a
+          ><i class="far fa-envelope">&nbsp;&nbsp;</i>joanna@dompodwierzba.pl</a
         >
         <a
           class="top-header__link top-header__link--tel"
           href="tel:+48730700277"
-          >+48 730 700 277</a
+          ><i class="fas fa-phone-alt">&nbsp;</i>+48 730 700 277</a
         >
       </header>
+
 
       <header class="main-header">
         <div class="main-header__logo">
           <img
             class="main-header__logo-img"
-            src="/images/dom-pod-wierzba-logo.jpg"
+            src="/images/logo-dom-pod-wierzba.png"
             alt="pod pod wierzbą logotyp"
           />
         </div>
@@ -80,7 +87,12 @@
 
       <section class="site-content">
         <section class="slider">
-          <img src="/images/slide-03.jpg" alt="Domu pod Wierzbą" />
+          <header class="slider__header focus-in-contract-bck">
+            <h2 class="slider__heading2">przyroda</h2>
+            <h3 class="slider__heading3">i zdrowie</h3>
+          </header>
+
+          <!-- <img src="/images/slide-03.jpg" alt="Domu pod Wierzbą" /> -->
         </section>
 
         <section class="offer">
@@ -124,7 +136,7 @@
 
           <article class="offer-article">
             <header class="offer-article__header">
-              <h2 class="offer-article__heading focus-in-contract-bck">
+              <h2 class="offer-article__heading">
                 Akupunktura
               </h2>
               <img
@@ -169,11 +181,22 @@
               rozwoju. Niepowtarzalne jest to, że Joanna i Paweł na co dzień tu
               mieszkają. To nadaje ośrodkowi przytulny charakter rodzinnego
               domu. To miejsce na szkolenia, warsztaty i treningi. Tutaj też
-              głównie prowadzimy nasze  sesje akupunktury, psychoterapii,
+              głównie prowadzimy nasze sesje akupunktury, psychoterapii,
               autorskie warsztaty i treningi oddechowe. Dom i jego położenie
-              daje wytchnienie, głębokie zanurzenie w ciszy i naturze. Sprzyja
-              kreatywnej i duchowej pracy.
+              dają wytchnienie, głębokie zanurzenie w ciszy i naturze. Sprzyja
+              to kreatywnej i duchowej pracy.
             </p>
+
+            <p class="about-article__text">
+            Piętro to czterdziestopięciometrowa sala warsztatowa wyposażona w
+            materace i poduchy. Na parterze do dyspozycji jest salon, dwie
+            łazienki. Można też skorzystać z naszego gabinetu terapeutycznego. W
+            domu jest dużo przestrzeni i swobody. Przyroda przez obszerne okna
+            wnika do wnętrza, a gdy na trawniku smakołyków szukają dwa
+            zaprzyjaźnione jelonki, serce mocniej bije, gdy się im patrzy prosto
+            w oczy z tak bliskiej odległości.
+            </p>
+
             <button class="about-article__button"></button>
           </article>
         </section>
@@ -296,7 +319,7 @@
         <p class="footer__text">copyright 2020 Dom Pod Wierzbą</p>
       </footer>
     </main>
-    
+
     <script src="/scripts/main.js"></script>
   </body>
 </html>

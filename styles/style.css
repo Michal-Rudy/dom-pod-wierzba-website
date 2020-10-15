@@ -57,9 +57,18 @@ body {
   background: #797d62;
   color: #f8e8cb;
   min-height: 100vh;
-  font-family: "Libre Baskerville", serif; }
+  font-family: "Libre Baskerville", serif;
+  background-image: url("/images/body-background-dom-pod-wierzba.jpg");
+  background-attachment: fixed;
+  background-position: 0 0px;
+  background-repeat: no-repeat; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1.15em; }
 
 h2 {
@@ -82,7 +91,8 @@ button {
   text-transform: uppercase;
   font-weight: bold;
   padding: 20px 60px;
-  margin: 40px 0; }
+  margin: 40px 0;
+  cursor: pointer; }
 
 button:hover {
   background-color: #ffe2ad; }
@@ -113,9 +123,9 @@ button:hover {
     margin-right: 20px;
     font-size: 14px; }
     .top-header__link--mail::before {
-      content: "mail: "; }
+      content: ""; }
     .top-header__link--tel::before {
-      content: "tel: "; }
+      content: ""; }
 
 .main-header {
   width: 100vw;
@@ -126,6 +136,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   background: #797d62;
+  opacity: 0.93;
   padding: 0 80px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
@@ -136,15 +147,20 @@ button:hover {
   top: 0;
   background: #5a4131; }
 
+.main-header__logo {
+  height: 100%;
+  margin-left: 0;
+  margin-top: 34px; }
+
+.shrink-and-sticky .main-header__logo {
+  height: 60px;
+  margin-top: 6px; }
+
 .shrink-and-sticky .main-header__logo-img {
   height: 90%; }
 
 .shrink-and-sticky .navigation__link {
   font-size: 15px; }
-
-.main-header__logo {
-  margin-left: 0;
-  height: 100%; }
 
 .navigation {
   display: none; }
@@ -278,9 +294,22 @@ li {
   transform: translate(450px, 0); }
 
 .slider {
-  overflow: hidden; }
+  min-height: 620px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .slider__header {
+    text-align: center; }
+  .slider__heading2 {
+    font-size: 4.5em;
+    text-transform: uppercase;
+    margin-bottom: 2px; }
+  .slider__heading3 {
+    font-size: 3.7em;
+    margin-top: 12px; }
 
 .offer {
+  background-color: #797d62;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 600px));
   column-gap: 20px;
