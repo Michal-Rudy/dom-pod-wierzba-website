@@ -6,7 +6,8 @@ $brown: #5a4131;
 $brown-alt: #594437; // text color on white
 $brown-light: #997b66;
 
-$palegreen: #797d62;
+//$palegreen: #797d62;
+$palegreen: #858154;
 $palegreen-light: #9b9b7a;
 
 $white: #fcf8ef; // text color
@@ -38,7 +39,9 @@ body {
   color: $whiteyellow;
   min-height: 100vh;
   font-family: "Libre Baskerville", serif;
-  
+}
+
+.bkgd-image {
   background-image: url("../images/body-background-dom-pod-wierzba.jpg");
   background-attachment: fixed;
   background-position: 0 0px;
@@ -125,7 +128,7 @@ button:hover {
   }
 }
 
-.main-header {
+.site-header {
   width: 100vw;
   height: 140px;
   display: flex;
@@ -133,7 +136,7 @@ button:hover {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  background: $brown;
+  background-color: $palegreen;
   opacity: 0.93;
   padding: 0 80px;
   z-index: 10;
@@ -148,18 +151,18 @@ button:hover {
   background: $brown;
 }
 
-.main-header__logo {
+.site-header__logo {
   height: 100%;
   margin-left: 0;
   margin-top: 34px;
 }
 
-.shrink-and-sticky .main-header__logo {
+.shrink-and-sticky .site-header__logo {
   height: 60px;
   margin-top: 6px;
 }
 
-.shrink-and-sticky .main-header__logo-img {
+.shrink-and-sticky .site-header__logo-img {
   height: 90%;
 }
 
@@ -482,6 +485,39 @@ li {
     margin: 0 auto 20px;
   }
 }
+
+
+
+
+.subpage {
+  background-color: $brown;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.subpage-article {
+  &__heading {
+    font-size: 32px;
+    color: $whiteyellow;
+    margin-bottom: 40px;
+  }
+  &__text {
+    color: $whiteyellow;
+    text-align: justify;
+  }
+  &__imaage-left {
+    float: left;
+    margin-right: 26px;
+  }
+
+  &__image--right {
+    float: right;
+    margin-left: 26px;
+  }
+}
+
+
 
 @media screen and (min-width: 480px) {
   .main {

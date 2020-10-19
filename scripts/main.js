@@ -9,8 +9,8 @@ hamburger.addEventListener("click", (e) => {
 window.addEventListener('scroll', () => {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
   const scrolled = window.scrollY;
-  if (scrolled >= 100) document.querySelector(".main-header").classList.add("shrink-and-sticky");
-  else document.querySelector(".main-header").classList.remove("shrink-and-sticky");
+  if (scrolled >= 100) document.querySelector(".site-header").classList.add("shrink-and-sticky");
+  else document.querySelector(".site-header").classList.remove("shrink-and-sticky");
 });
 
 

@@ -92,7 +92,9 @@ body {
   background: #5a4131;
   color: #f8e8cb;
   min-height: 100vh;
-  font-family: "Libre Baskerville", serif;
+  font-family: "Libre Baskerville", serif; }
+
+.bkgd-image {
   background-image: url("../images/body-background-dom-pod-wierzba.jpg");
   background-attachment: fixed;
   background-position: 0 0px;
@@ -165,7 +167,7 @@ button:hover {
     .top-header__link--tel::before {
       content: ""; }
 
-.main-header {
+.site-header {
   width: 100vw;
   height: 140px;
   display: flex;
@@ -173,7 +175,7 @@ button:hover {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  background: #5a4131;
+  background-color: #858154;
   opacity: 0.93;
   padding: 0 80px;
   z-index: 10;
@@ -186,16 +188,16 @@ button:hover {
   top: 0;
   background: #5a4131; }
 
-.main-header__logo {
+.site-header__logo {
   height: 100%;
   margin-left: 0;
   margin-top: 34px; }
 
-.shrink-and-sticky .main-header__logo {
+.shrink-and-sticky .site-header__logo {
   height: 60px;
   margin-top: 6px; }
 
-.shrink-and-sticky .main-header__logo-img {
+.shrink-and-sticky .site-header__logo-img {
   height: 90%; }
 
 .shrink-and-sticky .navigation__link {
@@ -372,7 +374,7 @@ li {
 
 .offer-article {
   padding: 100px 80px;
-  background-color: #797d62;
+  background-color: #858154;
   text-align: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
@@ -480,6 +482,29 @@ li {
     color: #fcf8ef;
     font-size: 1em;
     margin: 0 auto 20px; }
+
+.subpage {
+  background-color: #5a4131;
+  padding: 100px 20px;
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.subpage-article__heading {
+  font-size: 32px;
+  color: #f8e8cb;
+  margin-bottom: 40px; }
+
+.subpage-article__text {
+  color: #f8e8cb;
+  text-align: justify; }
+
+.subpage-article__imaage-left {
+  float: left;
+  margin-right: 26px; }
+
+.subpage-article__image--right {
+  float: right;
+  margin-left: 26px; }
 
 @media screen and (min-width: 480px) {
   .aside {
