@@ -176,6 +176,7 @@ button:hover {
   background: #5a4131;
   opacity: 0.93;
   padding: 0 80px;
+  z-index: 10;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
 
@@ -380,7 +381,7 @@ li {
     color: #f8e8cb; }
   .offer-article__thumb {
     border-radius: 50%;
-    border: 5px solid #ffb323; }
+    border: 1px solid #5a4131; }
   .offer-article__text {
     color: #f8e8cb;
     text-align: left; }
