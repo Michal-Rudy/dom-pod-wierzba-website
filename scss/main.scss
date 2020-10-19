@@ -111,7 +111,7 @@ button:hover {
   align-items: center;
   background: $brown-light;
   padding: 2px 20px;
-  height: 42px;
+  height: 32px;
   &__link {
     color: $paleyellow;
     margin-right: 20px;
@@ -181,12 +181,13 @@ button:hover {
 }
 
 .navigation__link {
-  font-size: 18px;
+  font-size: 16px;
   color: $yellow;
   display: block;
   margin-bottom: 10px;
   &--drop {
-    font-size: 16px;
+    line-height: 1.45em;
+    font-size: 15px;
     color: black;
   }
   &--discreet {
@@ -198,7 +199,7 @@ button:hover {
   color: $happy-yellow;
 }
 
-$min-width: 150px;
+$min-width: 170px;
 $maincolor: #6bbe92;
 $secondarycolor: #3e8760;
 
@@ -233,8 +234,12 @@ $secondarycolor: #3e8760;
     cursor: pointer;
     z-index: 5;
     min-width: $min-width;
+    width: auto;
   }
 }
+
+
+
 li {
   margin: 0;
 }
@@ -255,9 +260,18 @@ li {
     display: block;
     padding: 0;
     width: 100%;
-    background: $secondarycolor !important;
+    background: $secondarycolor;
+  }
+  li:hover {
+    background-color: #6bbe92;
   }
 }
+
+/* .main-menu-drop li:hover {background-color: #6bbe92;} */
+
+.navigation__listitem--drop { border-bottom: 1px solid $brown; }
+.navigation__listitem--drop:hover { background-color: #f1b48b; }
+
 #main-menu-marker {
   height: 5px;
   background: $yellow;
@@ -283,7 +297,7 @@ li {
 }
 
 .slider {
-  min-height: 660px;
+  min-height: 629px;
   display: flex;
   justify-content: center;
   align-items: center;
