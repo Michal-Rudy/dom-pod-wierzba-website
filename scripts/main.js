@@ -14,4 +14,8 @@ window.addEventListener('scroll', () => {
 });
 
 
-
+/* const hoverWholeArticle = document.querySelector(".offer-article");
+hoverWholeArticle.addEventListener("hover", (e) => {
+  document.querySelector(.article-text)
+});
+ */

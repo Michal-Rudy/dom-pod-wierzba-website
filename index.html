@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom Pod Wierzbą</title>
 
-    <link href="/styles/normalize.css" rel="stylesheet" type="text/css" />
-    <link href="/styles/style.css" rel="stylesheet" type="text/css" />
-    <script src="https://kit.fontawesome.com/9eaa68d1c9.js" crossorigin="anonymous"></script>
+    <link href="styles/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/9eaa68d1c9.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <main class="main">
-      
-      <?php 
-      include 'main-header.php';
-      ?>
-
       <header class="top-header">
         <a
           class="top-header__link top-header__link--mail"
@@ -30,12 +28,11 @@
         >
       </header>
 
-
       <header class="main-header">
         <div class="main-header__logo">
           <img
             class="main-header__logo-img"
-            src="/images/logo-dom-pod-wierzba.png"
+            src="images/logo-dom-pod-wierzba.png"
             alt="pod pod wierzbą logotyp"
           />
         </div>
@@ -50,7 +47,7 @@
               <ul class="main-menu-drop">
                 <div>
                   <li>
-                    <a class="navigation__link--drop" href="#offer"
+                    <a class="navigation__link--drop" href="nordic-walking.html"
                       >Wypoczynek z Nordic Walking</a
                     >
                   </li>
@@ -60,7 +57,7 @@
                     >
                   </li>
                   <li>
-                    <a class="navigation__link--drop" href="#offer"
+                    <a class="navigation__link--drop" href="akupunktura.html"
                       >Akupunktura</a
                     >
                   </li>
@@ -92,7 +89,7 @@
             <h3 class="slider__heading3">i zdrowie</h3>
           </header>
 
-          <!-- <img src="/images/slide-03.jpg" alt="Domu pod Wierzbą" /> -->
+          <!-- <img src="images/slide-03.jpg" alt="Domu pod Wierzbą" /> -->
         </section>
 
         <section class="offer">
@@ -103,8 +100,29 @@
               </h2>
               <img
                 class="offer-article__thumb"
-                src="/images/oferta-glowna-nordic-walking.jpg"
+                src="images/oferta-glowna-nordic-walking.jpg"
                 alt="Nordic Walking w Domu Pod Wierzbą"
+              />
+            </header>
+            <p class="offer-article__text">
+              Wypoczynek z Nordic Walking i Fizjoterapią to projekt, który
+              powstał spontanicznie, ponieważ gospodarze domu kochają Nordic
+              Walking i obydwoje są terapeutami i trenerami rozwoju osobistego.
+              Poczuli, że przyszedł czas zaprezentować ten rodzaj wypoczynku
+              szerszemu gronu odbiorców (...)
+            </p>
+            <a href="nordic-walking.html"
+              ><button class="offer-article__button">więcej</button></a
+            >
+          </article>
+
+          <article class="offer-article">
+            <header class="offer-article__header">
+              <h2 class="offer-article__heading">Akupunktura</h2>
+              <img
+                class="offer-article__thumb"
+                src="images/oferta-glowna-akupunktura.jpg"
+                alt="Akupunktura w Domu Pod Wierzbą"
               />
             </header>
             <p class="offer-article__text">
@@ -113,14 +131,16 @@
               distinctio iure optio minima autem est, corporis ab laudantium
               excepturi possimus quam deleniti!
             </p>
-            <button class="offer-article__button">więcej</button>
+            <a href="akupunktura.php"
+              ><button class="offer-article__button">więcej</button></a
+            >
           </article>
 
-          <article class="offer-article offer-article--even">
+          <article class="offer-article">
             <header class="offer-article__header">
               <img
                 class="offer-article__thumb"
-                src="/images/oferta-glowna-nordic-walking.jpg"
+                src="images/oferta-glowna-nordic-walking.jpg"
                 alt="Nordic Walking w Domu Pod Wierzbą"
               />
               <h2 class="offer-article__heading">Terapia holistyczna</h2>
@@ -134,25 +154,25 @@
             <button class="offer-article__button">więcej</button>
           </article>
 
-          <article class="offer-article">
-            <header class="offer-article__header">
-              <h2 class="offer-article__heading">
-                Akupunktura
-              </h2>
-              <img
-                class="offer-article__thumb"
-                src="/images/oferta-glowna-akupunktura.jpg"
-                alt="Akupunktura w Domu Pod Wierzbą"
-              />
-            </header>
-            <p class="offer-article__text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-              porro iste excepturi! Voluptate numquam quasi veritatis similique
-              distinctio iure optio minima autem est, corporis ab laudantium
-              excepturi possimus quam deleniti!
-            </p>
-            <button class="offer-article__button">więcej</button>
-          </article>
+          <a href="akupunktura.php">
+            <article class="offer-article">
+              <header class="offer-article__header">
+                <h2 class="offer-article__heading">Akupunktura</h2>
+                <img
+                  class="offer-article__thumb"
+                  src="images/oferta-glowna-akupunktura.jpg"
+                  alt="Akupunktura w Domu Pod Wierzbą"
+                />
+              </header>
+              <p class="offer-article__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+                porro iste excepturi! Voluptate numquam quasi veritatis
+                similique distinctio iure optio minima autem est, corporis ab
+                laudantium excepturi possimus quam deleniti!
+              </p>
+              <button class="offer-article__button">więcej</button>
+            </article>
+          </a>
         </section>
 
         <section class="about">
@@ -161,22 +181,22 @@
               <h2 class="about-article__heading">O domu...</h2>
               <img
                 class="about-article__image"
-                src="/images/o-domu-asia-szypula-dom-pod-wierzba.jpg"
+                src="images/o-domu-asia-szypula-dom-pod-wierzba.jpg"
                 alt="Joanna Szypuła"
               />
               <img
                 class="about-article__image"
-                src="/images/o-domu-grupa-warsztatowa-dom-pod-wierzba.jpg"
+                src="images/o-domu-grupa-warsztatowa-dom-pod-wierzba.jpg"
                 alt="Grupa warsztatowa"
               />
               <img
                 class="about-article__image"
-                src="/images/o-domu-ludzie-pod-wierzba.jpg"
+                src="images/o-domu-ludzie-pod-wierzba.jpg"
                 alt="Ludzie pod wierzbą"
               />
             </header>
 
-            <p class="about-article__text">
+            <p class="about-article__text bold">
               Dom pod Wierzbą to spokojny rodzinny dom, a jednocześnie ośrodek
               rozwoju. Niepowtarzalne jest to, że Joanna i Paweł na co dzień tu
               mieszkają. To nadaje ośrodkowi przytulny charakter rodzinnego
@@ -188,13 +208,13 @@
             </p>
 
             <p class="about-article__text">
-            Piętro to czterdziestopięciometrowa sala warsztatowa wyposażona w
-            materace i poduchy. Na parterze do dyspozycji jest salon, dwie
-            łazienki. Można też skorzystać z naszego gabinetu terapeutycznego. W
-            domu jest dużo przestrzeni i swobody. Przyroda przez obszerne okna
-            wnika do wnętrza, a gdy na trawniku smakołyków szukają dwa
-            zaprzyjaźnione jelonki, serce mocniej bije, gdy się im patrzy prosto
-            w oczy z tak bliskiej odległości.
+              Piętro to czterdziestopięciometrowa sala warsztatowa wyposażona w
+              materace i poduchy. Na parterze do dyspozycji jest salon, dwie
+              łazienki. Można też skorzystać z naszego gabinetu terapeutycznego.
+              W domu jest dużo przestrzeni i swobody. Przyroda przez obszerne
+              okna wnika do wnętrza, a gdy na trawniku smakołyków szukają dwa
+              zaprzyjaźnione jelonki, serce mocniej bije, gdy się im patrzy
+              prosto w oczy z tak bliskiej odległości.
             </p>
 
             <button class="about-article__button"></button>
@@ -203,7 +223,7 @@
 
         <section class="testimonials">
           <img
-            src="/images/testimonials-na-glownej-background.jpg"
+            src="images/testimonials-na-glownej-background.jpg"
             alt="opinie klientów"
           />
         </section>
@@ -217,7 +237,7 @@
             <div class="contact__col1">
               <img
                 class="contact__image"
-                src="/images/o-domu-asia-szypula-dom-pod-wierzba.jpg"
+                src="images/o-domu-asia-szypula-dom-pod-wierzba.jpg"
                 alt="Joanna Szypuła"
               />
             </div>
@@ -265,7 +285,7 @@
           <h2 class="fund-info__heading">
             <img
               class="fund-info__image"
-              src="/images/logotypy-UE-finansowanie.jpg"
+              src="images/logotypy-UE-finansowanie.jpg"
               alt="Finansowanie projektu"
             />
           </h2>
@@ -320,6 +340,6 @@
       </footer>
     </main>
 
-    <script src="/scripts/main.js"></script>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

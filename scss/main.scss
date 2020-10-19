@@ -1,30 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&&family=Nunito+Sans:wght@300;600&display=swap");
 @import "scss/animista.scss";
 
-$backgroundcolor-green: #797d62;
-$backgroundcolor-green-brighter: #9b9b7a;
-$backgroundcolor-yellow-intense: #ffcb69;
-$backgroundcolor-yellow: #f1dca7;
-$backgroundcolor-brown-light: #997b66;
 
-$topmenu-linkcolor: #ffcb69cb;
-$mainmenu-linkcolor: #ffcb69;
-$mainmenu-linkcolor-hover: #ffcb69;
+$brown: #5a4131;
+$brown-alt: #594437; // text color on white
+$brown-light: #997b66;
 
-$buttoncolor: #ffcb69;
-$buttoncolor-hover: #ffe2ad;
-$buttoncolor-dark: #d08c60;
-$buttoncolor-dark-hover: #f1b48b;
-$buttoncolor-dark-text: #f1efe3;
+$palegreen: #797d62;
+$palegreen-light: #9b9b7a;
 
-$happy-yellow: #ffb323;
+$white: #fcf8ef; // text color
+$whiteyellow: #f8e8cb; // text color intense
 
-$textcolor-light: #f8e8cb;
-$textcolor-dark: #594437;
-$textcolor-white: #fcf8ef;
+$yellow: #ffcb69; // button, menu link, 
+$happy-yellow: #ffb323; // button hover, menu link hover, 
+$paleyellow: #ffe2ad;
 
-$brownlight: #997b66;
-$browndarker: #5a4131;
+$rawsienna: #d08c60; // a la brown/orange
+$rawsienna-light: #f1b48b;
+
+
+
 
 html {
   box-sizing: border-box;
@@ -38,12 +34,12 @@ html {
 }
 
 body {
-  background: $backgroundcolor-green;
-  color: $textcolor-light;
+  background: $brown;
+  color: $whiteyellow;
   min-height: 100vh;
   font-family: "Libre Baskerville", serif;
   
-  background-image: url("/images/body-background-dom-pod-wierzba.jpg");
+  background-image: url("../images/body-background-dom-pod-wierzba.jpg");
   background-attachment: fixed;
   background-position: 0 0px;
   background-repeat: no-repeat;
@@ -65,7 +61,7 @@ h2 {
 }
 
 p {
-  line-height: 1.45em;
+  line-height: 1.6em;
 }
 
 a {
@@ -74,9 +70,9 @@ a {
 
 button {
   font-family: "Nunito Sans", Verdana, sans-serif;
-  background-color: $buttoncolor;
+  background-color: $yellow;
   border-radius: 3px;
-  color: $brownlight;
+  color: $brown-light;
   border: none;
   text-transform: uppercase;
   font-weight: bold;
@@ -86,7 +82,7 @@ button {
 }
 
 button:hover {
-  background-color: $buttoncolor-hover;
+  background-color: $happy-yellow;
 }
 
 .navigation ul {
@@ -101,6 +97,9 @@ button:hover {
   position: relative;
 }
 
+.bold { font-weight: bold; }
+
+
 .main {
   overflow: hidden;
 }
@@ -110,11 +109,11 @@ button:hover {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  background: $backgroundcolor-brown-light;
+  background: $brown-light;
   padding: 2px 20px;
   height: 42px;
   &__link {
-    color: $topmenu-linkcolor;
+    color: $paleyellow;
     margin-right: 20px;
     font-size: 14px;
     &--mail::before {
@@ -134,7 +133,7 @@ button:hover {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  background: $backgroundcolor-green;
+  background: $brown;
   opacity: 0.93;
   padding: 0 80px;
   -webkit-transition: all 0.4s ease;
@@ -145,7 +144,7 @@ button:hover {
   height: 60px;
   position: fixed;
   top: 0;
-  background: $browndarker;
+  background: $brown;
 }
 
 .main-header__logo {
@@ -183,7 +182,7 @@ button:hover {
 
 .navigation__link {
   font-size: 18px;
-  color: $mainmenu-linkcolor;
+  color: $yellow;
   display: block;
   margin-bottom: 10px;
   &--drop {
@@ -196,7 +195,7 @@ button:hover {
 }
 
 .navigation__link:hover {
-  color: $mainmenu-linkcolor-hover;
+  color: $happy-yellow;
 }
 
 $min-width: 150px;
@@ -261,7 +260,7 @@ li {
 }
 #main-menu-marker {
   height: 5px;
-  background: $mainmenu-linkcolor;
+  background: $yellow;
   position: absolute;
   bottom: 0;
   width: $min-width;
@@ -284,7 +283,7 @@ li {
 }
 
 .slider {
-  min-height: 620px;
+  min-height: 660px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -304,64 +303,87 @@ li {
 }
 
 .offer {
-  background-color: $backgroundcolor-green;
+  background-color: $brown;
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 600px));
-  column-gap: 20px;
-  row-gap: 20px;
+  grid-template-columns: repeat(4, minmax(220px, 480px));
+  column-gap: 1px;
+  row-gap: 1px;
   padding: 0;
   justify-content: center;
+  padding: 0;
+  position: relative;
+  top: 0;
 }
 .offer-article {
-  padding: 160px 80px;
-  background-color: $backgroundcolor-green;
+  padding: 100px 80px;
+  background-color: $palegreen;
   text-align: center;
-  &--even {
-    background-color: $backgroundcolor-green-brighter;
-  }
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+
   &__header {
   }
   &__heading {
     font-size: 32px;
-    color: $textcolor-light;
+    color: $whiteyellow;
   }
   &__thumb {
     border-radius: 50%;
     border: 5px solid $happy-yellow;
   }
   &__text {
-    color: $textcolor-light;
+    color: $whiteyellow;
+    text-align: left;
   }
   &__button {
     border-radius: 3px;
-    background-color: $buttoncolor;
+    background-color: $yellow;
   }
 }
 
+.offer-article:hover {
+  position: relative;
+  top: -5px;
+  background-color: $palegreen-light;
+  cursor: pointer;
+}
+
 .about {
-  background-color: $backgroundcolor-yellow;
+  background-color: $brown;
   display: flex;
   align-content: center;
   justify-content: center;
 }
+
+
 .about-article {
   padding: 160px 20px;
   text-align: center;
+  &__heading {
+    font-size: 32px;
+    color: $whiteyellow;
+    margin-bottom: 80px;
+  }
   &__text {
-    max-width: 800px;
-    color: $textcolor-dark;
+    color: $whiteyellow;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+
   }
   &__image {
     border-radius: 3px;
   }
 }
 
+
+
 .testimonials {
   margin: 0;
 }
 
 .contact {
-  background-color: $backgroundcolor-yellow-intense;
+  background-color: $yellow;
   padding: 100px 0 0;
 
   &__header {
@@ -369,7 +391,7 @@ li {
   }
   &__heading {
     font-size: 32px;
-    color: $textcolor-dark;
+    color: $brown-alt;
     margin-bottom: 80px;
   }
   &__info {
@@ -392,15 +414,15 @@ li {
     align-self: end;
   }
   &__heading3 {
-    color: $textcolor-dark;
+    color: $brown-alt;
     font-size: 22px;
   }
   &__text {
-    color: $textcolor-dark;
+    color: $brown-alt;
     font-size: 20px;
   }
   &__link {
-    color: $textcolor-dark;
+    color: $brown-alt;
     &--expose {
       font-size: 24px;
       font-weight: 600;
@@ -408,16 +430,16 @@ li {
   }
   &__button {
     border-radius: 3px;
-    background-color: $buttoncolor-dark;
-    color: $buttoncolor-dark-text;
+    background-color: $rawsienna;
+    color: $white;
   }
   &__button:hover {
-    background-color: $buttoncolor-dark-hover;
+    background-color: $rawsienna-light;
   }
 }
 
 .fund-info {
-  background-color: $backgroundcolor-brown-light;
+  background-color: $brown-light;
   padding: 120px 0;
   text-align: center;
 
@@ -427,20 +449,20 @@ li {
   }
   &__text {
     max-width: 800px;
-    color: $textcolor-white;
+    color:$white;
     font-size: 0.8em;
     margin: 0 auto 20px;
   }
 }
 
 .footer {
-  background-color: $browndarker;
+  background-color: $brown;
   padding: 120px 0;
   text-align: center;
 
   &__text {
     max-width: 800px;
-    color: $textcolor-white;
+    color: $white;
     font-size: 1em;
     margin: 0 auto 20px;
   }
