@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&&family=Nunito+Sans:wght@300;600&display=swap");
 @import "scss/animista.scss";
 
-
+$black: #1f1c1a;
+$brown-dark: #332821;
 $brown: #5a4131;
 $brown-alt: #594437; // text color on white
 $brown-light: #997b66;
@@ -54,7 +55,7 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.15em;
+  line-height: 1.25em;
 }
 
 h2 {
@@ -101,7 +102,19 @@ button:hover {
 }
 
 .bold { font-weight: bold; }
+.emptyspace20 { min-height: 20px; height: 20px; display: block; }
+.emptyspace40 { min-height: 40px; height: 40px; display: block; }
+.emptyspace80 { min-height: 80px; height: 80px; display: block; }
+.palegreen { background-color: $palegreen; }
+.darkbrown { background-color: $brown-dark; }
+.brown { background-color: $brown; }
 
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 250px));
+  column-gap: 24px;
+  row-gap: 24px;
+}
 
 .main {
   overflow: hidden;
@@ -112,7 +125,7 @@ button:hover {
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
-  background: $brown-light;
+  background: $brown-dark;
   padding: 2px 20px;
   height: 32px;
   &__link {
@@ -136,7 +149,6 @@ button:hover {
   align-content: center;
   justify-content: space-between;
   align-items: center;
-  background-color: $palegreen;
   opacity: 0.93;
   padding: 0 80px;
   z-index: 10;
@@ -148,7 +160,7 @@ button:hover {
   height: 60px;
   position: fixed;
   top: 0;
-  background: $brown;
+  background: $brown-dark;
 }
 
 .site-header__logo {
@@ -192,7 +204,7 @@ button:hover {
   &--drop {
     line-height: 1.45em;
     font-size: 15px;
-    color: black;
+    color: $black;
   }
   &--discreet {
     color: #d08c60;
@@ -204,8 +216,8 @@ button:hover {
 }
 
 $min-width: 170px;
-$maincolor: #6bbe92;
-$secondarycolor: #3e8760;
+$maincolor: $paleyellow;
+$secondarycolor: $palegreen-light;
 
 @mixin drop-menu-transform($value) {
   -webkit-transform: ($value);
@@ -267,14 +279,9 @@ li {
     background: $secondarycolor;
   }
   li:hover {
-    background-color: #6bbe92;
+    background-color: $paleyellow;
   }
 }
-
-/* .main-menu-drop li:hover {background-color: #6bbe92;} */
-
-.navigation__listitem--drop { border-bottom: 1px solid $brown; }
-.navigation__listitem--drop:hover { background-color: #f1b48b; }
 
 #main-menu-marker {
   height: 5px;
@@ -445,6 +452,11 @@ li {
       font-size: 24px;
       font-weight: 600;
     }
+    &--alt {
+      color: $whiteyellow; 
+      font-size: 24px;
+      font-weight: 600;
+    }
   }
   &__button {
     border-radius: 3px;
@@ -474,7 +486,7 @@ li {
 }
 
 .footer {
-  background-color: $brown;
+  background-color: $brown-dark;
   padding: 120px 0;
   text-align: center;
 
@@ -498,25 +510,71 @@ li {
 
 .subpage-article {
   &__heading {
-    font-size: 32px;
-    color: $whiteyellow;
+    font-size: 2.6em;
+    color: $rawsienna;
     margin-bottom: 40px;
   }
   &__text {
     color: $whiteyellow;
     text-align: justify;
   }
-  &__imaage-left {
+  &__text--intro {
+    color: $whiteyellow;
+    text-align: justify;
+    font-size: 1.2em;
+  }
+  &__image-left {
     float: left;
-    margin-right: 26px;
+    margin-right: 40px;
   }
 
   &__image--right {
     float: right;
-    margin-left: 26px;
+    margin-left: 40px;
+    width: 50%;
   }
 }
 
+.subpage-article__page {
+  margin: 40px 0;
+  &--style2 {
+  }
+}
+
+
+
+.subpage-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+
+  &__heading {
+    text-transform: none;
+    font-size: 1.6em;
+    color: $rawsienna;
+    margin-bottom: 0;
+  }
+  &__text {
+    color: $whiteyellow;
+    text-align: left;
+  }
+  &__image {
+    border-radius: 50%;
+    width: 160px;
+  }
+  &__image--left {
+    float: left;
+    margin-right: 46px;
+    border-radius: 50%;
+    width: 140px;
+  }
+
+  &__image--right {
+    float: right;
+    margin-left: 46px;
+    border-radius: 50%;
+  }
+}
 
 
 @media screen and (min-width: 480px) {
