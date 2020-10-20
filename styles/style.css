@@ -117,7 +117,8 @@ p {
   line-height: 1.6em; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #ffcb69; }
 
 button {
   font-family: "Nunito Sans", Verdana, sans-serif;
@@ -398,6 +399,7 @@ li {
   padding: 100px 80px;
   background-color: #7a8257;
   text-align: center;
+  height: 1000px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .offer-article__heading {
@@ -420,25 +422,34 @@ li {
   cursor: pointer; }
 
 .about {
-  background-color: #5a4131;
-  display: flex;
-  align-content: center;
-  justify-content: center; }
+  background-color: #5a4131; }
 
 .about-article {
-  padding: 160px 20px;
+  max-width: 1000px;
+  padding: 100px 20px;
+  margin: 0 auto;
   text-align: center; }
   .about-article__heading {
-    font-size: 32px;
+    font-size: 3em;
     color: #e8dabf;
     margin-bottom: 80px; }
   .about-article__text {
     color: #e8dabf;
-    max-width: 600px;
-    margin: 40px auto;
-    text-align: left; }
+    text-align: justify; }
+  .about-article__text--intro {
+    color: #e8dabf;
+    text-align: justify;
+    font-size: 1.4em; }
   .about-article__image {
-    border-radius: 3px; }
+    margin-right: 1px;
+    display: inline-block; }
+  .about-article__image--left {
+    float: left;
+    margin-right: 40px; }
+  .about-article__image--right {
+    float: right;
+    margin-left: 40px;
+    width: 50%; }
 
 .testimonials {
   margin: 0; }
@@ -496,7 +507,7 @@ li {
   .fund-info__text {
     max-width: 800px;
     color: #fcf8ef;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin: 0 auto 20px; }
 
 .footer {
