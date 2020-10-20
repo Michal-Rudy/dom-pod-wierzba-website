@@ -8,11 +8,12 @@ $brown-alt: #594437; // text color on white
 $brown-light: #997b66;
 
 //$palegreen: #797d62;
-$palegreen: #858154;
+$palegreen: #7a8257;
 $palegreen-light: #9b9b7a;
 
 $white: #fcf8ef; // text color
-$whiteyellow: #f8e8cb; // text color intense
+$whiteyellow: #e8dabf; // text color on dark
+$whitepaleyellow: #9a8b70;
 
 $yellow: #ffcb69; // button, menu link, 
 $happy-yellow: #ffb323; // button hover, menu link hover, 
@@ -129,7 +130,7 @@ button:hover {
   padding: 2px 20px;
   height: 32px;
   &__link {
-    color: $paleyellow;
+    color: $whitepaleyellow;
     margin-right: 20px;
     font-size: 14px;
     &--mail::before {
@@ -523,7 +524,7 @@ li {
     text-align: justify;
     font-size: 1.2em;
   }
-  &__image-left {
+  &__image--left {
     float: left;
     margin-right: 40px;
   }

@@ -90,7 +90,7 @@ html {
 
 body {
   background: #5a4131;
-  color: #f8e8cb;
+  color: #e8dabf;
   min-height: 100vh;
   font-family: "Libre Baskerville", serif; }
 
@@ -163,7 +163,7 @@ button:hover {
   display: block; }
 
 .palegreen {
-  background-color: #858154; }
+  background-color: #7a8257; }
 
 .darkbrown {
   background-color: #332821; }
@@ -189,7 +189,7 @@ button:hover {
   padding: 2px 20px;
   height: 32px; }
   .top-header__link {
-    color: #ffe2ad;
+    color: #9a8b70;
     margin-right: 20px;
     font-size: 14px; }
     .top-header__link--mail::before {
@@ -396,18 +396,18 @@ li {
 
 .offer-article {
   padding: 100px 80px;
-  background-color: #858154;
+  background-color: #7a8257;
   text-align: center;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .offer-article__heading {
     font-size: 32px;
-    color: #f8e8cb; }
+    color: #e8dabf; }
   .offer-article__thumb {
     border-radius: 50%;
     border: 1px solid #5a4131; }
   .offer-article__text {
-    color: #f8e8cb;
+    color: #e8dabf;
     text-align: left; }
   .offer-article__button {
     border-radius: 3px;
@@ -430,10 +430,10 @@ li {
   text-align: center; }
   .about-article__heading {
     font-size: 32px;
-    color: #f8e8cb;
+    color: #e8dabf;
     margin-bottom: 80px; }
   .about-article__text {
-    color: #f8e8cb;
+    color: #e8dabf;
     max-width: 600px;
     margin: 40px auto;
     text-align: left; }
@@ -479,7 +479,7 @@ li {
       font-size: 24px;
       font-weight: 600; }
     .contact__link--alt {
-      color: #f8e8cb;
+      color: #e8dabf;
       font-size: 24px;
       font-weight: 600; }
   .contact__button {
@@ -521,15 +521,15 @@ li {
   margin-bottom: 40px; }
 
 .subpage-article__text {
-  color: #f8e8cb;
+  color: #e8dabf;
   text-align: justify; }
 
 .subpage-article__text--intro {
-  color: #f8e8cb;
+  color: #e8dabf;
   text-align: justify;
   font-size: 1.2em; }
 
-.subpage-article__image-left {
+.subpage-article__image--left {
   float: left;
   margin-right: 40px; }
 
@@ -551,7 +551,7 @@ li {
     color: #d08c60;
     margin-bottom: 0; }
   .subpage-card__text {
-    color: #f8e8cb;
+    color: #e8dabf;
     text-align: left; }
   .subpage-card__image {
     border-radius: 50%;
