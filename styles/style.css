@@ -148,6 +148,11 @@ button:hover {
 .bold {
   font-weight: bold; }
 
+.emptyspace10 {
+  min-height: 10px;
+  height: 10px;
+  display: block; }
+
 .emptyspace20 {
   min-height: 20px;
   height: 20px;
@@ -171,6 +176,15 @@ button:hover {
 
 .brown {
   background-color: #5a4131; }
+
+.small-info {
+  font-size: 0.8em; }
+
+.align-left {
+  text-align: left; }
+
+.align-right {
+  text-align: right; }
 
 .grid-4-col {
   display: grid;
@@ -527,9 +541,15 @@ li {
   margin: 0 auto; }
 
 .subpage-article__heading {
-  font-size: 2.6em;
+  font-size: 3.3em;
   color: #d08c60;
   margin-bottom: 40px; }
+
+.subpage-article__heading2 {
+  font-size: 1.7em;
+  color: #d08c60;
+  text-transform: none;
+  margin-bottom: 10px; }
 
 .subpage-article__text {
   color: #e8dabf;
@@ -542,11 +562,13 @@ li {
 
 .subpage-article__image--left {
   float: left;
-  margin-right: 40px; }
+  margin-right: 40px;
+  margin-bottom: 20px; }
 
 .subpage-article__image--right {
   float: right;
   margin-left: 40px;
+  margin-bottom: 20px;
   width: 50%; }
 
 .subpage-article__page {
@@ -566,16 +588,7 @@ li {
     text-align: left; }
   .subpage-card__image {
     border-radius: 50%;
-    width: 160px; }
-  .subpage-card__image--left {
-    float: left;
-    margin-right: 46px;
-    border-radius: 50%;
-    width: 140px; }
-  .subpage-card__image--right {
-    float: right;
-    margin-left: 46px;
-    border-radius: 50%; }
+    max-width: 200px; }
 
 @media screen and (min-width: 480px) {
   .aside {
