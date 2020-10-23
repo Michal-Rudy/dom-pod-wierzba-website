@@ -64,11 +64,21 @@ h2 {
 
 p {
   line-height: 1.6em;
+  margin: 8px 0 12px;
 }
 
 a {
   text-decoration: none;
   color: $yellow;
+}
+
+ul {
+  margin: 2px 0;
+}
+
+
+li {
+  line-height: 1.6em;
 }
 
 button {
@@ -150,7 +160,12 @@ button:hover {
 .round5px {
   border-radius: 5px;
 }
-
+.the-half {
+  max-width: 100%
+}
+.one-third {
+  max-width: 100%
+}
 
 .grid-4-col {
   display: grid;
@@ -570,6 +585,12 @@ li {
     margin-bottom: 20px;
   }
 
+  &__heading3 {
+    font-size: 1.3em;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
   &__text {
     color: $whiteyellow;
     text-align: left;
@@ -628,6 +649,13 @@ li {
   .off-on-mob {
     display: block;
   }
+  .the-half {
+    max-width: 50%
+  }
+  .one-third {
+    max-width: 33%
+  }
+
 
   .navigation {
     display: flex;
@@ -675,6 +703,7 @@ li {
     }
     &__heading2 {
       font-size: 2em;
+      margin-top: 50px;
     }
     &__text {
       color: $whiteyellow;
