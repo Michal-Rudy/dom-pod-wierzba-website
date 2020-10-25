@@ -128,15 +128,7 @@ li {
   line-height: 1.6em; }
 
 button {
-  font-family: "Nunito Sans", Verdana, sans-serif;
-  background-color: #ffcb69;
-  border-radius: 3px;
-  color: #997b66;
   border: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 20px 60px;
-  margin: 40px 0;
   cursor: pointer; }
 
 button:hover {
@@ -218,7 +210,7 @@ button:hover {
   overflow: hidden; }
 
 .top-header {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
@@ -236,28 +228,29 @@ button:hover {
 
 .site-header {
   width: 100vw;
-  height: 140px;
+  height: 100px;
   display: flex;
   flex-flow: row;
   align-content: center;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
   opacity: 0.93;
-  padding: 0 80px;
   z-index: 10;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
+  .site-header__logo {
+    height: 100%;
+    margin-left: 0;
+    margin-top: 20px; }
+  .site-header__logo-img {
+    height: 80%; }
 
 .shrink-and-sticky {
   height: 60px;
   position: fixed;
   top: 0;
   background: #332821; }
-
-.site-header__logo {
-  height: 100%;
-  margin-left: 0;
-  margin-top: 34px; }
 
 .shrink-and-sticky .site-header__logo {
   height: 60px;
@@ -276,18 +269,17 @@ button:hover {
   display: block; }
 
 .hamburger {
-  position: absolute;
-  top: 16px;
-  right: 16px; }
+  background-color: #ffcb69;
+  color: #5a4131;
+  font-size: 3em; }
 
 .navigation__link {
-  font-size: 16px;
+  font-size: 14px;
   color: #ffcb69;
-  display: block;
-  margin-bottom: 10px; }
+  display: block; }
   .navigation__link--drop {
     line-height: 1.45em;
-    font-size: 15px;
+    font-size: 14px;
     color: #1f1c1a; }
   .navigation__link--discreet {
     color: #d08c60; }
@@ -299,31 +291,26 @@ button:hover {
   position: relative;
   list-style: none;
   background: inherit;
-  font-weight: 400;
-  font-size: 0;
   text-transform: uppercase;
   display: inline-block;
   padding: 0;
   margin: 50px auto; }
   #main-menu-ul li {
-    font-size: 0.8rem;
     display: inline-block;
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 16px;
     cursor: pointer;
     z-index: 5;
-    min-width: 170px;
     width: auto; }
-
-li {
-  margin: 0; }
+  #main-menu-ul li .navigation__listitem--drop {
+    min-width: 172px; }
 
 .main-menu-drop {
   overflow: hidden;
   list-style: none;
   position: absolute;
   padding: 0;
-  width: 100%;
+  width: 172px;
   left: 0;
   top: 48px; }
   .main-menu-drop div {
@@ -349,7 +336,7 @@ li {
   background: #ffcb69;
   position: absolute;
   bottom: 0;
-  width: 170px;
+  width: 172px;
   z-index: 2;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
@@ -375,10 +362,10 @@ li {
   transform: translate(0, 0); }
 
 #main-menu-ul li:nth-child(2):hover ~ #main-menu-marker {
-  -webkit-transform: translate(170px, 0);
-  -moz-transform: translate(170px, 0);
-  -ms-transform: translate(170px, 0);
-  transform: translate(170px, 0); }
+  -webkit-transform: translate(172px, 0);
+  -moz-transform: translate(172px, 0);
+  -ms-transform: translate(172px, 0);
+  transform: translate(172px, 0); }
 
 #main-menu-ul li:nth-child(3):hover ul div {
   -webkit-transform: translate(0, 0);
@@ -387,10 +374,10 @@ li {
   transform: translate(0, 0); }
 
 #main-menu-ul li:nth-child(3):hover ~ #main-menu-marker {
-  -webkit-transform: translate(340px, 0);
-  -moz-transform: translate(340px, 0);
-  -ms-transform: translate(340px, 0);
-  transform: translate(340px, 0); }
+  -webkit-transform: translate(344px, 0);
+  -moz-transform: translate(344px, 0);
+  -ms-transform: translate(344px, 0);
+  transform: translate(344px, 0); }
 
 #main-menu-ul li:nth-child(4):hover ul div {
   -webkit-transform: translate(0, 0);
@@ -399,10 +386,10 @@ li {
   transform: translate(0, 0); }
 
 #main-menu-ul li:nth-child(4):hover ~ #main-menu-marker {
-  -webkit-transform: translate(510px, 0);
-  -moz-transform: translate(510px, 0);
-  -ms-transform: translate(510px, 0);
-  transform: translate(510px, 0); }
+  -webkit-transform: translate(516px, 0);
+  -moz-transform: translate(516px, 0);
+  -ms-transform: translate(516px, 0);
+  transform: translate(516px, 0); }
 
 .slider {
   min-height: 629px;
@@ -448,8 +435,14 @@ li {
     color: #e8dabf;
     text-align: left; }
   .offer-article__button {
+    font-family: "Nunito Sans", Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #997b66;
+    background-color: #ffcb69;
     border-radius: 3px;
-    background-color: #ffcb69; }
+    padding: 20px 60px;
+    margin: 40px 0; }
 
 .offer-article:hover {
   position: relative;
@@ -558,19 +551,18 @@ li {
 
 .subpage {
   background-color: #5a4131;
-  padding: 100px 20px;
-  max-width: 1000px;
+  padding: 40px 20px;
   margin: 0 auto; }
 
 .subpage-article__heading {
-  font-size: 2.6em;
   color: #d08c60;
+  font-size: 2.6em;
   margin-top: 0;
-  margin-bottom: 40px; }
+  margin-bottom: 20px; }
 
 .subpage-article__heading2 {
-  font-size: 1.4em;
   color: #d08c60;
+  font-size: 1.4em;
   text-transform: none;
   margin-bottom: 20px; }
 
@@ -617,6 +609,10 @@ li {
 
 /* MEDIA QUERIES */
 /* ............. */
+@media screen and (min-width: 468px) {
+  .top-header {
+    display: flex; } }
+
 @media screen and (min-width: 768px) {
   .off-on-mob {
     display: block; }
@@ -628,8 +624,6 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .navigation__link {
-    margin-right: 20px; }
   .hamburger {
     display: none; }
   .contact__heading {
@@ -647,7 +641,8 @@ li {
       font-weight: 600; }
   .subpage-article__heading {
     font-size: 3.3em;
-    margin-top: 10px; }
+    margin-top: 20px;
+    margin-bottom: 60px; }
   .subpage-article__heading2 {
     font-size: 2em;
     margin-top: 50px; }
@@ -668,3 +663,30 @@ li {
     margin-left: 40px;
     margin-bottom: 20px;
     width: 50%; } }
+
+@media screen and (min-width: 1024px) {
+  .site-header {
+    height: 140px;
+    padding: 0 40px; }
+    .site-header__logo {
+      margin-top: 34px; }
+    .site-header__logo-img {
+      height: auto; }
+  .navigation__link {
+    margin-right: 20px;
+    font-size: 16px; }
+    .navigation__link--drop {
+      font-size: 15px; }
+  #main-menu-ul li {
+    padding: 15px 20px; }
+  #main-menu-ul li .navigation__listitem--drop {
+    min-width: 172px; }
+  .subpage {
+    padding: 100px 20px;
+    max-width: 1000px; }
+  .subpage-article__heading {
+    margin-bottom: 40px; } }
+
+@media screen and (min-width: 1200px) {
+  .site-header {
+    padding: 0 80px; } }

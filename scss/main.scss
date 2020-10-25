@@ -22,6 +22,8 @@ $paleyellow: #ffe2ad;
 $rawsienna: #d08c60; // a la brown/orange
 $rawsienna-light: #f1b48b;
 
+$min-width: 172px; // drop down menu item min-width
+
 html {
   box-sizing: border-box;
   line-height: 0;
@@ -76,21 +78,12 @@ ul {
   margin: 2px 0;
 }
 
-
 li {
   line-height: 1.6em;
 }
 
 button {
-  font-family: "Nunito Sans", Verdana, sans-serif;
-  background-color: $yellow;
-  border-radius: 3px;
-  color: $brown-light;
   border: none;
-  text-transform: uppercase;
-  font-weight: bold;
-  padding: 20px 60px;
-  margin: 40px 0;
   cursor: pointer;
 }
 
@@ -161,10 +154,10 @@ button:hover {
   border-radius: 5px;
 }
 .the-half {
-  max-width: 100%
+  max-width: 100%;
 }
 .one-third {
-  max-width: 100%
+  max-width: 100%;
 }
 
 .grid-4-col {
@@ -179,7 +172,7 @@ button:hover {
 }
 
 .top-header {
-  display: flex;
+  display: none;
   flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: center;
@@ -201,17 +194,27 @@ button:hover {
 
 .site-header {
   width: 100vw;
-  height: 140px;
+  height: 100px;
   display: flex;
   flex-flow: row;
   align-content: center;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
   opacity: 0.93;
-  padding: 0 80px;
   z-index: 10;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+
+  &__logo {
+    height: 100%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  &__logo-img {
+    height: 80%;
+  }
 }
 
 .shrink-and-sticky {
@@ -219,12 +222,6 @@ button:hover {
   position: fixed;
   top: 0;
   background: $brown-dark;
-}
-
-.site-header__logo {
-  height: 100%;
-  margin-left: 0;
-  margin-top: 34px;
 }
 
 .shrink-and-sticky .site-header__logo {
@@ -249,19 +246,18 @@ button:hover {
 }
 
 .hamburger {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  background-color: $yellow;
+  color: #5a4131;
+  font-size: 3em;
 }
 
 .navigation__link {
-  font-size: 16px;
+  font-size: 14px;
   color: $yellow;
   display: block;
-  margin-bottom: 10px;
   &--drop {
     line-height: 1.45em;
-    font-size: 15px;
+    font-size: 14px;
     color: $black;
   }
   &--discreet {
@@ -273,7 +269,6 @@ button:hover {
   color: $happy-yellow;
 }
 
-$min-width: 170px;
 $maincolor: $paleyellow;
 $secondarycolor: $palegreen-light;
 
@@ -294,33 +289,29 @@ $secondarycolor: $palegreen-light;
   position: relative;
   list-style: none;
   background: inherit;
-  font-weight: 400;
-  font-size: 0;
   text-transform: uppercase;
   display: inline-block;
   padding: 0;
   margin: 50px auto;
   li {
-    font-size: 0.8rem;
     display: inline-block;
     position: relative;
-    padding: 15px 20px;
+    padding: 15px 16px;
     cursor: pointer;
     z-index: 5;
-    min-width: $min-width;
     width: auto;
+  }
+  li .navigation__listitem--drop {
+    min-width: $min-width;
   }
 }
 
-li {
-  margin: 0;
-}
 .main-menu-drop {
   overflow: hidden;
   list-style: none;
   position: absolute;
   padding: 0;
-  width: 100%;
+  width: $min-width;
   left: 0;
   top: 48px;
   div {
@@ -358,9 +349,6 @@ li {
       @include drop-menu-transform(translate(#{(-1 + $i) * $min-width}, 0));
     }
   }
-}
-
-.main-content {
 }
 
 .slider {
@@ -418,8 +406,14 @@ li {
     text-align: left;
   }
   &__button {
-    border-radius: 3px;
+    font-family: "Nunito Sans", Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $brown-light;
     background-color: $yellow;
+    border-radius: 3px;
+    padding: 20px 60px;
+    margin: 40px 0;
   }
 }
 
@@ -566,21 +560,20 @@ li {
 
 .subpage {
   background-color: $brown;
-  padding: 100px 20px;
-  max-width: 1000px;
+  padding: 40px 20px;
   margin: 0 auto;
 }
 
 .subpage-article {
   &__heading {
-    font-size: 2.6em;
     color: $rawsienna;
+    font-size: 2.6em;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
   &__heading2 {
-    font-size: 1.4em;
     color: $rawsienna;
+    font-size: 1.4em;
     text-transform: none;
     margin-bottom: 20px;
   }
@@ -639,23 +632,24 @@ li {
   }
 }
 
-
 /* MEDIA QUERIES */
 /* ............. */
+@media screen and (min-width: 468px) {
+  .top-header {
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 768px) {
-
-
-
   .off-on-mob {
     display: block;
   }
   .the-half {
-    max-width: 50%
+    max-width: 50%;
   }
   .one-third {
-    max-width: 33%
+    max-width: 33%;
   }
-
 
   .navigation {
     display: flex;
@@ -663,13 +657,9 @@ li {
     align-items: center;
   }
 
-  .navigation__link {
-    margin-right: 20px;
-  }
   .hamburger {
     display: none;
   }
-
 
   .contact {
     &__heading {
@@ -678,7 +668,7 @@ li {
     &__info {
       grid-column-gap: 80px;
     }
-    
+
     &__link {
       color: $brown-alt;
       &--expose {
@@ -693,13 +683,11 @@ li {
     }
   }
 
-
-
-
   .subpage-article {
     &__heading {
       font-size: 3.3em;
-      margin-top: 10px;
+      margin-top: 20px;
+      margin-bottom: 60px;
     }
     &__heading2 {
       font-size: 2em;
@@ -728,5 +716,48 @@ li {
       margin-bottom: 20px;
       width: 50%;
     }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .site-header {
+    height: 140px;
+    padding: 0 40px;
+    &__logo {
+      margin-top: 34px;
+    }
+    &__logo-img {
+      height: auto;
+    }
+  }
+  .navigation__link {
+    margin-right: 20px;
+    font-size: 16px;
+    &--drop {
+      font-size: 15px;
+    }
+  }
+  #main-menu-ul {
+    li {
+      padding: 15px 20px;
+    }
+    li .navigation__listitem--drop {
+      min-width: $min-width;
+    }
+  }
+  .subpage {
+    padding: 100px 20px;
+    max-width: 1000px;
+  }
+  .subpage-article {
+    &__heading {
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-header {
+    padding: 0 80px;
   }
 }
