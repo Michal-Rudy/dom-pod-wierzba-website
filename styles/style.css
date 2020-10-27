@@ -206,6 +206,12 @@ button:hover {
   column-gap: 24px;
   row-gap: 24px; }
 
+.grid-2-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 600px));
+  column-gap: 24px;
+  row-gap: 24px; }
+
 .main {
   overflow: hidden; }
 
@@ -454,7 +460,7 @@ button:hover {
   background-color: #5a4131; }
 
 .about-article {
-  max-width: 1000px;
+  max-width: 800px;
   padding: 100px 20px;
   margin: 0 auto;
   text-align: center; }
@@ -479,9 +485,34 @@ button:hover {
     float: right;
     margin-left: 40px;
     width: 50%; }
+  .about-article__mini-gallery {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 0px;
+    row-gap: 0px; }
 
 .testimonials {
-  margin: 0; }
+  background-image: url("../images/testimonials-na-glownej-background.jpg");
+  background-attachment: scroll;
+  background-position: 0 0px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 530px; }
+  .testimonials__container {
+    max-width: 900px;
+    text-align: center; }
+  .testimonials__icon {
+    color: #e8dabf;
+    font-size: 2.7em; }
+  .testimonials__text {
+    color: #e8dabf;
+    font-size: 1.7em; }
+  .testimonials__signature {
+    font-size: 2em;
+    font-style: italic;
+    color: #d08c60; }
 
 .contact {
   background-color: #ffcb69;
@@ -495,9 +526,6 @@ button:hover {
   .contact__info {
     max-width: 800px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 280px 1fr;
-    grid-column-gap: 40px;
     padding: 0 0 100px;
     font-family: "Nunito Sans", serif; }
   .contact__col1 {
@@ -514,7 +542,9 @@ button:hover {
     color: #594437;
     font-size: 20px; }
   .contact__link {
-    color: #594437; }
+    color: #594437;
+    font-size: 1.4em;
+    font-weight: 600; }
     .contact__link--expose {
       font-size: 1.2em;
       font-weight: 600; }
@@ -523,31 +553,111 @@ button:hover {
       font-size: 1.2em;
       font-weight: 600; }
   .contact__button {
-    border-radius: 3px;
     background-color: #d08c60;
-    color: #fcf8ef; }
+    color: #fcf8ef;
+    border-radius: 3px;
+    padding: 14px 40px;
+    margin: 20px 0; }
   .contact__button:hover {
     background-color: #f1b48b; }
 
+.contact-form {
+  max-width: 420px;
+  margin: 50px auto; }
+  .contact-form__input {
+    color: #e8dabf;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #ffcb69;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0; }
+  .contact-form__input:focus {
+    border: 2px solid #ffb323; }
+  .contact-form__textarea {
+    height: 150px;
+    color: #e8dabf;
+    font-family: "Nunito Sans", Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 5px;
+    line-height: 22px;
+    background-color: transparent;
+    border: 2px solid #ffcb69;
+    transition: all 0.3s;
+    padding: 13px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: 0; }
+  .contact-form__textarea:focus {
+    border: 2px solid #ffb323; }
+  .contact-form__submit {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    width: 100%;
+    background: #ffcb69;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    color: #5a4131;
+    font-size: 24px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: all 0.3s;
+    margin-top: -4px;
+    font-weight: 700;
+    text-transform: uppercase; }
+  .contact-form__submit:hover {
+    background: #ffb323; }
+
 .fund-info {
-  background-color: #997b66;
-  padding: 120px 0;
+  background-color: #5a4131;
+  padding: 20px 0;
   text-align: center; }
   .fund-info__text {
     max-width: 800px;
-    color: #fcf8ef;
+    color: #e8dabf;
     font-size: 0.9em;
-    margin: 0 auto 20px; }
+    margin: 0 auto 30px; }
 
 .footer {
   background-color: #332821;
-  padding: 120px 0;
+  padding: 80px 0;
   text-align: center; }
+  .footer__4-col {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(180px, 500px));
+    column-gap: 24px;
+    row-gap: 24px;
+    margin-bottom: 80px;
+    color: #997b66; }
+  .footer__section {
+    border-right: 1px solid #594437; }
   .footer__text {
     max-width: 800px;
-    color: #fcf8ef;
+    color: #594437;
     font-size: 1em;
     margin: 0 auto 20px; }
+  .footer__contact-link {
+    color: #997b66;
+    font-size: 1.4em; }
+  .footer__social {
+    font-size: 3em; }
+  .footer__menu-links-ul {
+    margin: 10px 20px;
+    list-style-type: none; }
+  .footer__menu-links-ul li {
+    margin-bottom: 8px; }
+  .footer__menu-links-a {
+    color: #997b66;
+    font-size: 1.3em; }
 
 .subpage {
   background-color: #5a4131;
@@ -607,6 +717,8 @@ button:hover {
     border-radius: 50%;
     max-width: 200px; }
 
+/* ................................................................................................ */
+/* ................... */
 /* MEDIA QUERIES */
 /* ............. */
 @media screen and (min-width: 468px) {
@@ -629,7 +741,7 @@ button:hover {
   .contact__heading {
     font-size: 1.6em; }
   .contact__info {
-    grid-column-gap: 80px; }
+    grid-column-gap: 40px; }
   .contact__link {
     color: #594437; }
     .contact__link--expose {
