@@ -1,0 +1,218 @@
+
+.mainmenu {
+    margin-top: 28px;
+}
+
+.mainmenu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: $palegreen;
+  }
+  
+  .mainmenu .mainmenu-ul{
+    clear: both;
+    max-height: 0;
+    -webkit-transition: max-height .2s ease-out;
+    transition: max-height .2s ease-out;
+    -webkit-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+  }
+
+  .mainmenu li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .mainmenu li a:hover,
+  .mainmenu .menu-btn:hover {
+    background-color: $palegreen-light
+  }
+  
+  
+  .mainmenu__dropdown-ul
+    {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    perspective: 1000px;
+    display: none;
+    }
+.dropdown:hover .dropdown_menu--animated
+  { display: block; }
+  
+  
+  /* menu icon */
+  
+  .mainmenu .menu-icon {
+    color: $yellow;
+    font-size: 3em;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+  
+  .mainmenu .menu-icon .navicon {
+    background: $yellow;
+    display: block;
+    height: 4px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 28px;
+  }
+  
+  .mainmenu .menu-icon .navicon:before,
+  .mainmenu .menu-icon .navicon:after {
+    background: $yellow;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .mainmenu .menu-icon .navicon:before {
+    top: 8px;
+  }
+  
+  .mainmenu .menu-icon .navicon:after {
+    top: -8px;
+  }
+  
+  /* menu btn */
+  
+  .mainmenu .menu-btn {
+    display: none;
+  }
+  
+  .mainmenu .menu-btn:checked ~ .mainmenu-ul{
+    max-height: 240px;
+   /*  position: absolute;
+    right: 0;
+    top: 130px;
+    width: 100vw;
+    text-align: right; */
+  }
+  
+  .mainmenu .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  
+  .mainmenu .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  
+  .mainmenu .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+  
+  .mainmenu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .mainmenu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+  
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .mainmenu li {
+      float: left;
+    }
+    .mainmenu li a {
+      padding: 10px 30px;
+    }
+    .mainmenu .mainmenu-ul{
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .mainmenu .menu-icon {
+      display: none;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .mainmenu {
+        margin-top: 48px;
+    }
+  }
+
+/* $maincolor: $paleyellow;
+$secondarycolor: $palegreen-light;
+
+@mixin drop-menu-transform($value) {
+  -webkit-transform: ($value);
+  -moz-transform: ($value);
+  -ms-transform: ($value);
+  transform: ($value);
+}
+@mixin drop-menu-transition($value) {
+  -webkit-transition: ($value);
+  -moz-transition: ($value);
+  -ms-transition: ($value);
+  transition: ($value);
+}
+
+#main-menu-ul {
+  position: relative;
+  list-style: none;
+  background: inherit;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 0;
+  margin: 50px auto;
+  li {
+    display: inline-block;
+    position: relative;
+    padding: 15px 16px;
+    cursor: pointer;
+    z-index: 5;
+    width: auto;
+  }
+  li .mainmenu__listitem--drop {
+    min-width: $min-width;
+  }
+}
+
+.main-menu-drop {
+  overflow: hidden;
+  list-style: none;
+  position: absolute;
+  padding: 0;
+  width: $min-width;
+  left: 0;
+  top: 48px;
+  div {
+    @include drop-menu-transform(translate(0, -100%));
+    @include drop-menu-transition(all 0.5s 0.1s);
+    position: relative;
+  }
+  li {
+    display: block;
+    padding: 0;
+    width: 100%;
+    background: $secondarycolor;
+  }
+  li:hover {
+    background-color: $paleyellow;
+  }
+}
+
+#main-menu-marker {
+  height: 5px;
+  background: $yellow;
+  position: absolute;
+  bottom: 0;
+  width: $min-width;
+  z-index: 2;
+  @include drop-menu-transition(all 0.35s);
+}
+
+} */
