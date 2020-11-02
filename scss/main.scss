@@ -169,7 +169,7 @@ button:hover {
 
 .grid-2-col {
   display: grid;
-  grid-template-columns: repeat(2, minmax(180px, 600px));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 600px));
   column-gap: 24px;
   row-gap: 24px;
 }
@@ -354,11 +354,12 @@ button:hover {
 
 .about-article {
   max-width: 800px;
-  padding: 100px 20px;
+  padding: 100px 40px;
   margin: 0 auto;
   text-align: center;
 
   &__heading {
+    display: none;
     font-size: 3em;
     color: $whiteyellow;
     margin-bottom: 80px;
@@ -402,7 +403,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   min-height: 530px;
-  padding: 0 20px;
+  padding: 0 40px;
 
   &__container {
     max-width: 900px;
@@ -411,15 +412,15 @@ button:hover {
 
   &__icon {
     color: $whiteyellow;
-    font-size: 2.7em;
+    font-size: 2.4em;
   }
 
   &__text {
     color: $whiteyellow;
-    font-size: 1.7em;
+    font-size: 1.4em;
   }
   &__signature {
-    font-size: 2em;
+    font-size: 1.8em;
     font-style: italic;
     color: $rawsienna;
   }
@@ -442,17 +443,18 @@ button:hover {
     margin: 0 auto;
     padding: 0 0 100px;
     font-family: "Nunito Sans", serif;
-  }
-  &__col1 {
-    justify-self: end;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(200px, 360px));
+    justify-items: center;
+    justify-content: space-evenly;
+    column-gap: 20px;
+    row-gap: 20px;
   }
   &__col2 {
-    justify-self: center;
+    text-align: center;
   }
-  &__col3 {
-    justify-self: start;
-    align-self: end;
-  }
+
   &__heading3 {
     color: $brown-alt;
     font-size: 22px;
@@ -575,17 +577,20 @@ button:hover {
   text-align: center;
 
   &__4-col {
-    display: block;
-    padding: 40px 0;
-    grid-template-columns: repeat(4, minmax(180px, 500px));
-    column-gap: 24px;
-    row-gap: 24px;
-    margin-bottom: 80px;
+    display: grid;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    column-gap: 0;
+    row-gap: 80px;
+    margin: 80px 0;
     color: $brown-light;
   }
 
   &__section {
-    border-right: 1px solid $brown-alt;
+    border-bottom: 1px solid $brown-alt;
+    padding-bottom: 80px;
   }
 
   &__text {
@@ -605,6 +610,7 @@ button:hover {
   &__menu-links-ul {
     margin: 10px 20px;
     list-style-type: none;
+    padding-inline-start: 0;
   }
   &__menu-links-ul li {
     margin-bottom: 8px;
@@ -710,14 +716,31 @@ button:hover {
     max-width: 33%;
   }
 
+  .testimonials {
+    &__icon {
+      font-size: 2.7em;
+    }
+
+    &__text {
+      font-size: 1.7em;
+    }
+    &__signature {
+      font-size: 2em;
+    }
+  }
+
   .contact {
     &__heading {
       font-size: 1.6em;
     }
     &__info {
       grid-column-gap: 40px;
+     
     }
-
+    &__col2 {
+      text-align: left;
+    }
+  
     &__link {
       color: $brown-alt;
       &--expose {
@@ -729,6 +752,12 @@ button:hover {
         font-size: 1.5em;
         font-weight: 600;
       }
+    }
+  }
+
+  .footer {
+    &__section {
+      border-bottom: none;
     }
   }
 
@@ -764,13 +793,6 @@ button:hover {
       margin-left: 40px;
       margin-bottom: 20px;
       width: 50%;
-    }
-  }
-
-  .footer {
-    &__4-col {
-      display: grid;
-      padding: 20px;
     }
   }
 }
