@@ -1,148 +1,208 @@
-
 .mainmenu {
-    margin-top: 28px;
+  margin-top: 28px;
 }
 
 .mainmenu ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    overflow: hidden;
-    background-color: $palegreen;
-  }
-  
-  .mainmenu .mainmenu-ul{
-    clear: both;
-    max-height: 0;
-    -webkit-transition: max-height .2s ease-out;
-    transition: max-height .2s ease-out;
-    -webkit-transition: background-color 0.4s ease;
-    transition: background-color 0.4s ease;
-  }
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20ps;
+  list-style: none;
+  overflow: hidden;
+  background-color: $palegreen;
+}
 
-  .mainmenu li a {
-    display: block;
-    padding: 10px 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
-  .mainmenu li a:hover,
-  .mainmenu .menu-btn:hover {
-    background-color: $palegreen-light
-  }
-  
-  
-  .mainmenu__dropdown-ul
-    {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    perspective: 1000px;
-    display: none;
-    }
-.dropdown:hover .dropdown_menu--animated
-  { display: block; }
-  
-  
-  /* menu icon */
-  
-  .mainmenu .menu-icon {
-    color: $yellow;
-    font-size: 3em;
-    cursor: pointer;
-    display: inline-block;
-    float: right;
-    padding: 28px 20px;
-    position: relative;
-    user-select: none;
-  }
-  
-  .mainmenu .menu-icon .navicon {
-    background: $yellow;
-    display: block;
-    height: 4px;
-    position: relative;
-    transition: background .2s ease-out;
-    width: 28px;
-  }
-  
-  .mainmenu .menu-icon .navicon:before,
-  .mainmenu .menu-icon .navicon:after {
-    background: $yellow;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-  }
-  
-  .mainmenu .menu-icon .navicon:before {
-    top: 8px;
-  }
-  
-  .mainmenu .menu-icon .navicon:after {
-    top: -8px;
-  }
-  
-  /* menu btn */
-  
-  .mainmenu .menu-btn {
-    display: none;
-  }
-  
-  .mainmenu .menu-btn:checked ~ .mainmenu-ul{
-    max-height: 240px;
-   /*  position: absolute;
+.mainmenu .mainmenu-ul {
+  clear: both;
+  max-height: 0;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  -webkit-transition: background-color 0.4s ease;
+  transition: background-color 0.4s ease;
+}
+
+.mainmenu li a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.mainmenu li .mainmenu__link--drop a {
+  padding: 10px 2px;
+}
+
+.drop-item .mainmenu__link--drop {
+  padding: 10px 4px;
+  font-size: 16px;
+  text-transform: none;
+}
+
+.mainmenu li a:hover,
+.mainmenu .menu-btn:hover {
+  background-color: $palegreen-light;
+}
+
+.drop-menu {
+    display: flex;
+    flex-direction: column; /* This never changes */
+    align-items: flex-start;
+    width: 150px; /* Allows sub buttons to stretch across button width in main-menu*/
+    transition: max-height .4s, opacity .3s;
+    max-height: 0;
+    opacity: 0;
+    background-color: $palegreen;
+}
+
+.drop-menu > .drop-item {
+  height: 100%;
+  transition: transform .4s;
+  transform: translateY(-300%);
+  background: $palegreen; /* Makes the menu effects visible on close */ 
+  min-width: 170px;
+}
+
+.dropdown-wrapper:hover .drop-menu{
+  max-height: 300px;  
+  opacity: 1;
+}
+
+/* The specifity keeps styles from affecting main menu button */
+.dropdown-wrapper:hover > .drop-menu .drop-item {
+  transform: translateY(0%); 
+}
+
+.effect {
+  transition: max-height 0s;
+  opacity: 1;
+  background: transparent;
+}
+.effect .drop-item {
+  transform: translateY(0%); 
+}
+
+
+.scissor .drop-item{
+  transform: translateX(-100%);
+}
+/* Selects every other menu button to slide the opposite way */
+.scissor .drop-item:nth-child(2n+1) {
+  transform: translateX(100%);
+}
+.dropdown-wrapper:hover .scissor .drop-item {
+  transform: translateX(0%);
+}
+
+
+.fade-in .drop-item {
+  transition: opacity .5s;
+  opacity: 0;
+}
+.dropdown-wrapper:hover .fade-in .drop-item {
+  opacity: 1;
+}
+
+
+
+/* menu icon */
+
+.mainmenu .menu-icon {
+  color: $yellow;
+  font-size: 3em;
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.mainmenu .menu-icon .navicon {
+  background: $yellow;
+  display: block;
+  height: 4px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 28px;
+}
+
+.mainmenu .menu-icon .navicon:before,
+.mainmenu .menu-icon .navicon:after {
+  background: $yellow;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+
+.mainmenu .menu-icon .navicon:before {
+  top: 8px;
+}
+
+.mainmenu .menu-icon .navicon:after {
+  top: -8px;
+}
+
+/* menu btn */
+
+.mainmenu .menu-btn {
+  display: none;
+}
+
+.mainmenu .menu-btn:checked ~ .mainmenu-ul {
+  max-height: 540px;
+  /*  position: absolute;
     right: 0;
     top: 130px;
     width: 100vw;
     text-align: right; */
-  }
-  
-  .mainmenu .menu-btn:checked ~ .menu-icon .navicon {
-    background: transparent;
-  }
-  
-  .mainmenu .menu-btn:checked ~ .menu-icon .navicon:before {
-    transform: rotate(-45deg);
-  }
-  
-  .mainmenu .menu-btn:checked ~ .menu-icon .navicon:after {
-    transform: rotate(45deg);
-  }
-  
-  .mainmenu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-  .mainmenu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-    top: 0;
-  }
-  
-  /* 48em = 768px */
-  
-  @media (min-width: 48em) {
-    .mainmenu li {
-      float: left;
-    }
-    .mainmenu li a {
-      padding: 10px 30px;
-    }
-    .mainmenu .mainmenu-ul{
-      clear: none;
-      float: right;
-      max-height: none;
-    }
-    .mainmenu .menu-icon {
-      display: none;
-    }
-  }
+}
 
-  @media (min-width: 1025px) {
-    .mainmenu {
-        margin-top: 48px;
-    }
+.mainmenu .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.mainmenu .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.mainmenu .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.mainmenu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.mainmenu .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+  .mainmenu li {
+    float: left;
   }
+  .mainmenu li a {
+    padding: 10px 30px;
+  }
+  .mainmenu .mainmenu-ul {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .mainmenu .menu-icon {
+    display: none;
+  }
+  .mainmenu ul {
+    background-color: transparent;
+    }
+}
+
+@media (min-width: 1025px) {
+  .mainmenu {
+    margin-top: 48px;
+  }
+}
 
 /* $maincolor: $paleyellow;
 $secondarycolor: $palegreen-light;

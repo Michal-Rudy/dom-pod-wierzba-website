@@ -216,7 +216,7 @@ button:hover {
   &__logo {
     height: 100%;
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   &__logo-img {
@@ -232,7 +232,7 @@ button:hover {
 
   .site-header__logo {
     height: 60px;
-    margin-top: 6px;
+    margin-top: 2px;
   }
 
   .site-header__logo-img {
@@ -295,7 +295,7 @@ button:hover {
 
 .offer {
   background-color: $brown;
-  display: grid;
+  display: block;
   grid-template-columns: repeat(4, minmax(220px, 480px));
   column-gap: 1px;
   row-gap: 1px;
@@ -306,17 +306,17 @@ button:hover {
   top: 0;
 }
 .offer-article {
-  padding: 100px 80px;
+  padding: 40px 40px 10px;
+  margin: 0 40px 20px;
   background-color: $palegreen;
   text-align: center;
-  height: 1000px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 
   &__header {
   }
   &__heading {
-    font-size: 32px;
+    font-size: 28px;
     color: $whiteyellow;
   }
   &__thumb {
@@ -325,7 +325,9 @@ button:hover {
   }
   &__text {
     color: $whiteyellow;
-    text-align: left;
+    text-align: center;
+    max-width: 480px;
+    margin: 0 auto;
   }
   &__button {
     font-family: "Nunito Sans", Verdana, sans-serif;
@@ -400,6 +402,7 @@ button:hover {
   align-items: center;
   justify-content: center;
   min-height: 530px;
+  padding: 0 20px;
 
   &__container {
     max-width: 900px;
@@ -551,7 +554,7 @@ button:hover {
 
 .fund-info {
   background-color: $brown;
-  padding: 20px 0;
+  padding: 20px 40px;
   text-align: center;
 
   &__heading {
@@ -572,7 +575,8 @@ button:hover {
   text-align: center;
 
   &__4-col {
-    display: grid;
+    display: block;
+    padding: 40px 0;
     grid-template-columns: repeat(4, minmax(180px, 500px));
     column-gap: 24px;
     row-gap: 24px;
@@ -762,6 +766,13 @@ button:hover {
       width: 50%;
     }
   }
+
+  .footer {
+    &__4-col {
+      display: grid;
+      padding: 20px;
+    }
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -769,7 +780,7 @@ button:hover {
     height: 140px;
     padding: 0 40px;
     &__logo {
-      margin-top: 34px;
+      margin-top: 19px;
     }
     &__logo-img {
       height: auto;
@@ -795,6 +806,18 @@ button:hover {
       min-width: $min-width;
     }
   }
+
+  .offer {
+    display: grid;
+  }
+  .offer-article {
+    padding: 40px 20px;
+    margin: 0;
+    &__text {
+      text-align: left;
+    }
+  }
+
   .subpage {
     padding: 100px 20px;
     max-width: 1000px;
@@ -809,5 +832,18 @@ button:hover {
 @media screen and (min-width: 1200px) {
   .site-header {
     padding: 0 80px;
+  }
+
+  .offer-article {
+    padding: 60px 40px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .offer-article {
+    padding: 100px 80px;
+    &__heading {
+      font-size: 32px;
+    }
   }
 }

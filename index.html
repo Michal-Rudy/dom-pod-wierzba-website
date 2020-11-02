@@ -38,42 +38,43 @@
             />
           </a>
         </div>
-        <!-- <button class="hamburger hamburger--js" aria-label="otwórz menu">
-          MENU
-        </button> -->
 
         <nav class="mainmenu navigation--js">
           <input class="menu-btn" type="checkbox" id="menu-btn" />
-          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+          <label class="menu-icon" for="menu-btn"
+            ><span class="navicon"></span
+          ></label>
           <ul class="mainmenu-ul">
             <li><a class="mainmenu__link" href="index.html">Home</a></li>
-           <li>
-              <a class="mainmenu__link" href="#offer">Oferta</a>
-              <ul class="mainmenu__dropdown-ul">
-                <li class="mainmenu__listitem--drop">
+
+            <li class="dropdown dropdown-wrapper drop-item">
+              <a class="mainmenu__link drop-item" href="#offer">Oferta</a>
+              <ul class="drop-menu">
+                <li class="drop-item">
                   <a class="mainmenu__link--drop" href="nordic-walking.html"
                     >Wypoczynek z Nordic Walking</a
                   >
                 </li>
-                <li class="mainmenu__listitem--drop">
+                <li class="drop-item">
                   <a
                     class="mainmenu__link--drop"
                     href="terapia-holistyczna.html"
                     >Terapia holistyczna</a
                   >
                 </li>
-                <li class="mainmenu__listitem--drop">
+                <li class="drop-item">
                   <a class="mainmenu__link--drop" href="akupunktura.html"
                     >Akupunktura</a
                   >
                 </li>
-                <li class="mainmenu__listitem--drop">
+                <li class="drop-item">
                   <a class="mainmenu__link--drop" href="warsztaty.html"
                     >Warsztaty</a
                   >
                 </li>
               </ul>
             </li>
+
             <li><a class="mainmenu__link" href="kontakt.html">Kontakt</a></li>
             <li>
               <a
@@ -85,60 +86,16 @@
             <!-- <div id="main-menu-marker"></div> -->
           </ul>
         </nav>
-
-        <!-- <nav class="mainmenu mainmenu--js">
-          <ul id="main-menu-ul">
-            <li><a class="mainmenu__link" href="index.html">Home</a></li>
-            <li>
-              <a class="mainmenu__link" href="#offer">Oferta</a>
-              <ul class="main-menu-drop">
-                <div>
-                  <li class="mainmenu__listitem--drop">
-                    <a class="mainmenu__link--drop" href="nordic-walking.html"
-                      >Wypoczynek z Nordic Walking</a
-                    >
-                  </li>
-                  <li class="mainmenu__listitem--drop">
-                    <a
-                      class="mainmenu__link--drop"
-                      href="terapia-holistyczna.html"
-                      >Terapia holistyczna</a
-                    >
-                  </li>
-                  <li class="mainmenu__listitem--drop">
-                    <a class="mainmenu__link--drop" href="akupunktura.html"
-                      >Akupunktura</a
-                    >
-                  </li>
-                  <li class="mainmenu__listitem--drop">
-                    <a class="mainmenu__link--drop" href="warsztaty.html"
-                      >Warsztaty</a
-                    >
-                  </li>
-                </div>
-              </ul>
-            </li>
-            <li><a class="mainmenu__link" href="kontakt.html">Kontakt</a></li>
-            <li>
-              <a
-                class="mainmenu__link mainmenu__link--discreet"
-                href="lgd-dobra-widawa.html"
-                >LGD Dobra Widawa</a
-              >
-            </li>
-            
-          </ul>
-        </nav> -->
       </header>
 
       <section class="site-content">
         <section class="slider">
-          <header class="slider__header focus-in-contract-bck">
+          <header class="slider__header">
             <h2 class="slider__heading2">przyroda</h2>
             <h3 class="slider__heading3">i zdrowie</h3>
           </header>
 
-          <!-- <img src="images/slide-03.jpg" alt="Domu pod Wierzbą" /> -->
+          <!-- <img src="images/slide-03.jpg" alt="Domu pod Wierzbą" />   focus-in-contract-bck -->
         </section>
 
         <section class="fund-info">
@@ -199,7 +156,7 @@
             <article class="offer-article">
               <header class="offer-article__header">
                 <img
-                  class="offer-article__thumb"
+                  class="offer-article__thumb" style="max-width: 200px;"
                   src="images/o-domu-grupa-warsztatowa-dom-pod-wierzba.jpg"
                   alt="Warsztaty w domu pod Wierzbą"
                 />
@@ -209,10 +166,8 @@
                 Dom pod Wierzbą jest idealnym miejscem do przeprowadzania
                 kameralnych kilkudniowych warsztatów. Dobrze się u nas czują
                 grupy kilkunastoosobowe. Dom jest nowoczesny, bardzo wygodny i
-                przestronny. Został wybudowany w taki sposób, żeby chronić
-                środowisko naturalne. Stojąc tuż przy lesie, daje gościom stałe
-                uczucie połączenia z naturą, doświadczenie głębokiej ciszy i
-                spokoju...
+                przestronny. Stojąc tuż przy lesie, daje gościom stałe uczucie
+                połączenia z naturą, doświadczenie głębokiej ciszy i spokoju...
               </p>
               <button class="offer-article__button">więcej >></button>
             </article>
@@ -229,10 +184,10 @@
                 <h2 class="offer-article__heading">Terapia holistyczna</h2>
               </header>
               <p class="offer-article__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                porro iste excepturi! Voluptate numquam quasi veritatis
-                similique distinctio iure optio minima autem est, corporis ab
-                laudantium excepturi possimus quam deleniti!
+                Zapraszam na sesje terapii holistycznej, w której łączę
+                podejście psychoterapii pozytywnej i coachingu z mądrością
+                rdzennych kultur i Dalekiego Wschodu. Pracuję na poziomie
+                świadomości, podświadomości i energetyki...
               </p>
               <button class="offer-article__button">więcej >></button>
             </article>
@@ -250,10 +205,10 @@
               </header>
 
               <p class="offer-article__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-                porro iste excepturi! Voluptate numquam quasi veritatis
-                similique distinctio iure optio minima autem est, corporis ab
-                laudantium excepturi possimus quam deleniti!
+                Akupunktura to bezpieczna i efektywna metoda pomagająca w
+                procesie zdrowienia każdego człowieka, wywodzącą się z Dalekiego
+                Wschodu. Jej skuteczność poparta jest przez ponad cztery tysiące
+                lat praktyki i badań.
               </p>
               <button class="offer-article__button">więcej >></button>
             </article>
@@ -418,7 +373,7 @@
         <div class="footer__4-col">
           <section class="footer__section">
             <img
-              class="site-header__logo-img"
+            
               src="images/logo-dom-pod-wierzba-coffee.png"
               alt="pod pod wierzbą logotyp"
             />
