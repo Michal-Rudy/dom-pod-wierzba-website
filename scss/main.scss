@@ -43,7 +43,7 @@ body {
 }
 
 .bkgd-image {
-  background-image: url("../images/body-background-dom-pod-wierzba.jpg");
+  background-image: url("../images/body-background-dom-pod-wierzba-800x533.jpg");
   background-attachment: fixed;
   background-position: 0 0px;
   background-repeat: no-repeat;
@@ -65,8 +65,9 @@ h2 {
 }
 
 p {
-  line-height: 1.6em;
+  line-height: 1.4em;
   margin: 8px 0 12px;
+  font-size: 0.9em;
 }
 
 a {
@@ -274,7 +275,7 @@ button:hover {
 @import "scss/mainmenu.scss";
 
 .slider {
-  min-height: 629px;
+  min-height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,12 +284,12 @@ button:hover {
   }
 
   &__heading2 {
-    font-size: 4.5em;
+    font-size: 2.5em;
     text-transform: uppercase;
     margin-bottom: 2px;
   }
   &__heading3 {
-    font-size: 3.7em;
+    font-size: 1.7em;
     margin-top: 12px;
   }
 }
@@ -366,12 +367,12 @@ button:hover {
   }
   &__text {
     color: $whiteyellow;
-    text-align: justify;
+    text-align: left;
   }
   &__text--intro {
     color: $whiteyellow;
-    text-align: justify;
-    font-size: 1.5em;
+    text-align: left;
+    font-size: 1.2em;
   }
   &__image {
     margin-right: 1px;
@@ -382,15 +383,15 @@ button:hover {
     margin-right: 40px;
   }
   &__image--right {
-    float: right;
-    margin-left: 40px;
-    width: 50%;
+    width: 100%;
+    margin: 10px 0;
   }
   &__mini-gallery {
     display: flex;
     flex-flow: row wrap;
     column-gap: 0px;
-    row-gap: 0px;
+    row-gap: 1px;
+    justify-content: center;
   }
 }
 
@@ -573,7 +574,7 @@ button:hover {
 
 .footer {
   background-color: $brown-dark;
-  padding: 80px 0;
+  padding: 20px 0;
   text-align: center;
 
   &__4-col {
@@ -630,19 +631,20 @@ button:hover {
 .subpage-article {
   &__heading {
     color: $rawsienna;
-    font-size: 2.6em;
+    font-size: 2.2em;
     margin-top: 0;
     margin-bottom: 20px;
   }
   &__heading2 {
     color: $rawsienna;
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-transform: none;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 12px;
   }
 
   &__heading3 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-top: 30px;
     margin-bottom: 0;
   }
@@ -654,7 +656,7 @@ button:hover {
   &__text--intro {
     color: $whiteyellow;
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1.1em;
   }
 
   &__image--left {
@@ -706,6 +708,16 @@ button:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .bkgd-image {
+    background-image: url("../images/body-background-dom-pod-wierzba-1024x457.jpg");
+  }
+
+  p {
+    line-height: 1.5em;
+    margin: 8px 0 12px;
+    font-size: 1.1em;
+  }
+
   .off-on-mob {
     display: block;
   }
@@ -714,6 +726,31 @@ button:hover {
   }
   .one-third {
     max-width: 33%;
+  }
+
+  .slider {
+    min-height: 300px;
+    &__heading2 {
+      font-size: 2.7em;
+    }
+    &__heading3 {
+      font-size: 1.9em;
+    }
+  }
+
+  .about-article {
+    &__text {
+      text-align: justify;
+    }
+    &__text--intro {
+      text-align: justify;
+      font-size: 1.5em;
+    }
+    &__image--right {
+      float: right;
+      margin-left: 40px;
+      width: 50%;
+    }
   }
 
   .testimonials {
@@ -735,12 +772,11 @@ button:hover {
     }
     &__info {
       grid-column-gap: 40px;
-     
     }
     &__col2 {
       text-align: left;
     }
-  
+
     &__link {
       color: $brown-alt;
       &--expose {
@@ -763,22 +799,20 @@ button:hover {
 
   .subpage-article {
     &__heading {
-      font-size: 3.3em;
+      font-size: 3em;
       margin-top: 20px;
       margin-bottom: 60px;
     }
     &__heading2 {
-      font-size: 2em;
+      font-size: 1.7em;
       margin-top: 50px;
     }
     &__text {
-      color: $whiteyellow;
       text-align: justify;
     }
     &__text--intro {
-      color: $whiteyellow;
       text-align: justify;
-      font-size: 1.3em;
+      font-size: 1.1em;
     }
 
     &__image--left {
@@ -798,6 +832,10 @@ button:hover {
 }
 
 @media screen and (min-width: 1024px) {
+  .bkgd-image {
+    background-image: url("../images/body-background-dom-pod-wierzba-1920x800.jpg");
+  }
+
   .site-header {
     height: 140px;
     padding: 0 40px;
@@ -828,6 +866,15 @@ button:hover {
       min-width: $min-width;
     }
   }
+  .slider {
+    min-height: 400px;
+    &__heading2 {
+      font-size: 3.7em;
+    }
+    &__heading3 {
+      font-size: 2.9em;
+    }
+  }
 
   .offer {
     display: grid;
@@ -844,16 +891,49 @@ button:hover {
     padding: 100px 20px;
     max-width: 1000px;
   }
+
   .subpage-article {
     &__heading {
+      font-size: 3.3em;
+      margin-top: 20px;
       margin-bottom: 40px;
     }
+    &__heading2 {
+      font-size: 2em;
+      margin-top: 50px;
+    }
+    &__text {
+      text-align: justify;
+    }
+    &__text--intro {
+      text-align: justify;
+      font-size: 1.3em;
+    }
+  }
+  .footer {
+    padding: 60px 0;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  p {
+    line-height: 1.6em;
+    margin: 8px 0 12px;
+    font-size: 1.2em;
+  }
+
   .site-header {
     padding: 0 80px;
+  }
+
+  .slider {
+    min-height: 629px;
+    &__heading2 {
+      font-size: 4.5em;
+    }
+    &__heading3 {
+      font-size: 3.7em;
+    }
   }
 
   .offer-article {
