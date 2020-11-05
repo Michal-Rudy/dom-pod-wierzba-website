@@ -95,7 +95,7 @@ body {
   font-family: "Libre Baskerville", serif; }
 
 .bkgd-image {
-  background-image: url("../images/body-background-dom-pod-wierzba-800x533.jpg");
+  background-image: url("../images/body-background-dom-pod-wierzba-800x400.jpg");
   background-attachment: fixed;
   background-position: 0 0px;
   background-repeat: no-repeat; }
@@ -235,7 +235,7 @@ button:hover {
 
 .site-header {
   width: 100vw;
-  height: 100px;
+  height: 72px;
   display: flex;
   flex-flow: row;
   align-content: center;
@@ -249,7 +249,7 @@ button:hover {
   .site-header__logo {
     height: 100%;
     margin-left: 0;
-    margin-top: 10px; }
+    margin-top: 3px; }
   .site-header__logo-img {
     height: 80%; }
 
@@ -286,7 +286,7 @@ button:hover {
   color: #ffb323; }
 
 .mainmenu {
-  margin-top: 28px; }
+  margin-top: 8px; }
 
 .mainmenu ul {
   margin: 0;
@@ -306,7 +306,7 @@ button:hover {
 
 .mainmenu li a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 16px;
   text-decoration: none;
   text-transform: uppercase; }
 
@@ -437,10 +437,12 @@ button:hover {
 
 /* 48em = 768px */
 @media (min-width: 48em) {
+  .mainmenu {
+    margin-top: 24px; }
   .mainmenu li {
     float: left; }
   .mainmenu li a {
-    padding: 10px 30px; }
+    padding: 10px 16px; }
   .mainmenu .mainmenu-ul {
     clear: none;
     float: right;
@@ -450,9 +452,11 @@ button:hover {
   .mainmenu ul {
     background-color: transparent; } }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .mainmenu {
-    margin-top: 48px; } }
+    margin-top: 48px; }
+  .mainmenu li a {
+    padding: 10px 30px; } }
 
 /* $maincolor: $paleyellow;
 $secondarycolor: $palegreen-light;
@@ -527,7 +531,7 @@ $secondarycolor: $palegreen-light;
 
 } */
 .slider {
-  min-height: 400px;
+  min-height: 270px;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -538,8 +542,8 @@ $secondarycolor: $palegreen-light;
     text-transform: uppercase;
     margin-bottom: 2px; }
   .slider__heading3 {
-    font-size: 1.7em;
-    margin-top: 12px; }
+    font-size: 2em;
+    margin-top: 2px; }
 
 .offer {
   background-color: #5a4131;
@@ -592,7 +596,7 @@ $secondarycolor: $palegreen-light;
 
 .about-article {
   max-width: 800px;
-  padding: 100px 40px;
+  padding: 100px 20px;
   margin: 0 auto;
   text-align: center; }
   .about-article__heading {
@@ -753,8 +757,11 @@ $secondarycolor: $palegreen-light;
 
 .fund-info {
   background-color: #5a4131;
-  padding: 20px 40px;
+  padding: 10px 20px;
   text-align: center; }
+  .fund-info__image {
+    width: 100%;
+    max-width: 735px; }
   .fund-info__text {
     max-width: 800px;
     color: #e8dabf;
@@ -786,6 +793,13 @@ $secondarycolor: $palegreen-light;
   .footer__contact-link {
     color: #997b66;
     font-size: 1.4em; }
+    .footer__contact-link:hover {
+      color: #f1b48b; }
+  .footer__contact-link--mail {
+    color: #997b66;
+    font-size: 1.2em; }
+    .footer__contact-link--mail:hover {
+      color: #f1b48b; }
   .footer__social {
     font-size: 3em; }
   .footer__menu-links-ul {
@@ -797,6 +811,8 @@ $secondarycolor: $palegreen-light;
   .footer__menu-links-a {
     color: #997b66;
     font-size: 1.3em; }
+    .footer__menu-links-a:hover {
+      color: #f1b48b; }
 
 .subpage {
   background-color: #5a4131;
@@ -878,12 +894,14 @@ $secondarycolor: $palegreen-light;
     max-width: 50%; }
   .one-third {
     max-width: 33%; }
+  .site-header {
+    height: 87px; }
   .slider {
     min-height: 300px; }
     .slider__heading2 {
       font-size: 2.7em; }
     .slider__heading3 {
-      font-size: 1.9em; }
+      font-size: 2.2em; }
   .about-article__text {
     text-align: justify; }
   .about-article__text--intro {
@@ -961,7 +979,7 @@ $secondarycolor: $palegreen-light;
   #main-menu-ul li .navigation__listitem--drop {
     min-width: 172px; }
   .slider {
-    min-height: 400px; }
+    min-height: 480px; }
     .slider__heading2 {
       font-size: 3.7em; }
     .slider__heading3 {

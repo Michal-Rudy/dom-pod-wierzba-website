@@ -1,5 +1,5 @@
 .mainmenu {
-  margin-top: 28px;
+  margin-top: 8px;
 }
 
 .mainmenu ul {
@@ -22,7 +22,7 @@
 
 .mainmenu li a {
   display: block;
-  padding: 10px 20px;
+  padding: 10px 16px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -179,11 +179,14 @@
 /* 48em = 768px */
 
 @media (min-width: 48em) {
+  .mainmenu {
+    margin-top: 24px;
+  }
   .mainmenu li {
     float: left;
   }
   .mainmenu li a {
-    padding: 10px 30px;
+    padding: 10px 16px;
   }
   .mainmenu .mainmenu-ul {
     clear: none;
@@ -198,9 +201,12 @@
     }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .mainmenu {
     margin-top: 48px;
+  }
+  .mainmenu li a {
+    padding: 10px 30px;
   }
 }
 

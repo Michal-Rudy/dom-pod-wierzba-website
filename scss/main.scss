@@ -43,7 +43,7 @@ body {
 }
 
 .bkgd-image {
-  background-image: url("../images/body-background-dom-pod-wierzba-800x533.jpg");
+  background-image: url("../images/body-background-dom-pod-wierzba-800x400.jpg");
   background-attachment: fixed;
   background-position: 0 0px;
   background-repeat: no-repeat;
@@ -202,7 +202,7 @@ button:hover {
 
 .site-header {
   width: 100vw;
-  height: 100px;
+  height: 72px;
   display: flex;
   flex-flow: row;
   align-content: center;
@@ -217,7 +217,7 @@ button:hover {
   &__logo {
     height: 100%;
     margin-left: 0;
-    margin-top: 10px;
+    margin-top: 3px;
   }
 
   &__logo-img {
@@ -275,7 +275,7 @@ button:hover {
 @import "scss/mainmenu.scss";
 
 .slider {
-  min-height: 400px;
+  min-height: 270px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -289,8 +289,8 @@ button:hover {
     margin-bottom: 2px;
   }
   &__heading3 {
-    font-size: 1.7em;
-    margin-top: 12px;
+    font-size: 2em;
+    margin-top: 2px;
   }
 }
 
@@ -355,7 +355,7 @@ button:hover {
 
 .about-article {
   max-width: 800px;
-  padding: 100px 40px;
+  padding: 100px 20px;
   margin: 0 auto;
   text-align: center;
 
@@ -557,12 +557,14 @@ button:hover {
 
 .fund-info {
   background-color: $brown;
-  padding: 20px 40px;
+  padding: 10px 20px;
   text-align: center;
 
   &__heading {
   }
   &__image {
+    width: 100%;
+    max-width: 735px;
   }
   &__text {
     max-width: 800px;
@@ -603,6 +605,17 @@ button:hover {
   &__contact-link {
     color: $brown-light;
     font-size: 1.4em;
+    &:hover {
+      color: $rawsienna-light;
+    }
+  }
+ 
+  &__contact-link--mail {
+    color: $brown-light;
+    font-size: 1.2em;
+    &:hover {
+      color: $rawsienna-light;
+    }
   }
 
   &__social {
@@ -619,6 +632,9 @@ button:hover {
   &__menu-links-a {
     color: $brown-light;
     font-size: 1.3em;
+    &:hover {
+      color: $rawsienna-light;
+    }
   }
 }
 
@@ -728,13 +744,17 @@ button:hover {
     max-width: 33%;
   }
 
+  .site-header {
+    height: 87px;
+  }
+
   .slider {
     min-height: 300px;
     &__heading2 {
       font-size: 2.7em;
     }
     &__heading3 {
-      font-size: 1.9em;
+      font-size: 2.2em;
     }
   }
 
@@ -867,7 +887,7 @@ button:hover {
     }
   }
   .slider {
-    min-height: 400px;
+    min-height: 480px;
     &__heading2 {
       font-size: 3.7em;
     }

@@ -31,11 +31,16 @@
       <header class="site-header palegreen">
         <div class="site-header__logo">
           <a href="index.html">
-            <img
-              class="site-header__logo-img"
-              src="images/logo-dom-pod-wierzba.png"
-              alt="pod pod wierzbą logotyp"
-            />
+
+            <picture>
+              <source
+                srcset="images/logo-dom-pod-wierzba-230x103.png"
+                media="(min-width: 1024px)"
+              />
+              <source srcset="images/logo-dom-pod-wierzba-179x80.png" media="(min-width: 768px)" />
+              <img src="images/logo-dom-pod-wierzba-145x65.png" alt="Dom Pod Wierzbą logotyp" />
+            </picture>
+
           </a>
         </div>
 
@@ -235,11 +240,10 @@
         </section>
       </section>
 
-      <footer class="footer">
+    <footer class="footer">
         <div class="footer__4-col">
           <section class="footer__section">
             <img
-            
               src="images/logo-dom-pod-wierzba-coffee.png"
               alt="pod pod wierzbą logotyp"
             />
@@ -286,7 +290,7 @@
             <p>&nbsp;</p>
             <p>
               <a
-                class="footer__contact-link"
+                class="footer__contact-link--mail"
                 href="mailto:joanna@dompodwierzba.pl"
                 ><i class="far fa-envelope">&nbsp;&nbsp;</i
                 >joanna@dompodwierzba.pl</a
@@ -298,11 +302,19 @@
               >
             </p>
           </section>
-          <section class="footer__section">
-            <p class="footer__social"><i class="fab fa-facebook-f"></i></p>
+        <section class="footer__section">
+            <p class="footer__social">
+              <a
+                class="footer__contact-link"
+                href="https://www.facebook.com/DompodWierzba"
+                target="_blank"
+                ><i class="fab fa-facebook-f">&nbsp;</i></a
+              >
+            </p>
           </section>
         </div>
-        <p class="footer__text">2020 © Dom Pod Wierzbą</p>
+        <p class="footer__text">Dom Pod Wierzbą © 2020</p>
+      </footer>
     </main>
 
     <script src="scripts/main.js"></script>
