@@ -41,14 +41,15 @@
                 media="(min-width: 768px)"
               />
               <img
+                class="site-header__logo-img"
                 src="images/logo-dom-pod-wierzba-145x65.png"
                 alt="Dom Pod Wierzbą logotyp"
               />
             </picture>
           </a>
         </div>
-
-        <nav class="mainmenu navigation--js">
+       
+        <nav class="mainmenu" role="navigation">
           <input class="menu-btn" type="checkbox" id="menu-btn" />
           <label class="menu-icon" for="menu-btn"
             ><span class="navicon"></span
@@ -57,8 +58,8 @@
             <li><a class="mainmenu__link" href="index.html">Home</a></li>
 
             <li class="dropdown dropdown-wrapper drop-item">
-              <a class="mainmenu__link drop-item" href="#offer">Oferta</a>
-              <ul class="drop-menu">
+              <a class="mainmenu__link drop-item" href="#" aria-haspopup="true">Oferta</a>
+              <ul class="drop-menu" aria-label="submenu">
                 <li class="drop-item">
                   <a class="mainmenu__link--drop" href="nordic-walking.html"
                     >Wypoczynek z Nordic Walking</a
@@ -92,9 +93,57 @@
                 >LGD Dobra Widawa</a
               >
             </li>
-            <!-- <div id="main-menu-marker"></div> -->
+            <!-- <div id="main-menu-marker"></div>-->
           </ul>
         </nav>
+
+        <!-- <nav class="mainmenu" role="navigation">
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+          <label class="menu-icon" for="menu-btn"
+            ><span class="navicon"></span
+          ></label>
+          <ul class="mainmenu-ul">
+            <li><a class="mainmenu__link" href="index.html">Home</a></li>
+
+            <li class="dropdown dropdown-wrapper drop-item">
+              <a class="mainmenu__link drop-item" href="#" aria-haspopup="true">Oferta</a>
+              <ul class="drop-menu" aria-label="submenu">
+                <li class="drop-item">
+                  <a class="mainmenu__link--drop" href="nordic-walking.html"
+                    >Wypoczynek z Nordic Walking</a
+                  >
+                </li>
+                <li class="drop-item">
+                  <a
+                    class="mainmenu__link--drop"
+                    href="terapia-holistyczna.html"
+                    >Terapia holistyczna</a
+                  >
+                </li>
+                <li class="drop-item">
+                  <a class="mainmenu__link--drop" href="akupunktura.html"
+                    >Akupunktura</a
+                  >
+                </li>
+                <li class="drop-item">
+                  <a class="mainmenu__link--drop" href="warsztaty.html"
+                    >Warsztaty</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <li><a class="mainmenu__link" href="kontakt.html">Kontakt</a></li>
+            <li>
+              <a
+                class="mainmenu__link mainmenu__link--discreet"
+                href="lgd-dobra-widawa.html"
+                >LGD Dobra Widawa</a
+              >
+            </li>
+          </ul>
+        </nav> -->
+
       </header>
 
       <section class="site-content">
@@ -186,7 +235,7 @@
               <header class="offer-article__header">
                 <img
                   class="offer-article__thumb"
-                  src="images/oferta-glowna-nordic-walking.jpg"
+                  src="images/oferta-glowna-terapia-holistyczna.jpg"
                   alt="Nordic Walking w Domu Pod Wierzbą"
                 />
                 <h2 class="offer-article__heading">Terapia holistyczna</h2>
@@ -379,7 +428,7 @@
 
       <footer class="footer">
         <div class="footer__4-col">
-          <section class="footer__section">
+          <section class="footer__section off-on-mob">
             <img
               src="images/logo-dom-pod-wierzba-coffee.png"
               alt="pod pod wierzbą logotyp"
@@ -389,31 +438,37 @@
           <section class="footer__section">
             <ul class="footer__menu-links-ul">
               <li>
+                <i class="fas fa-caret-right"></i>
                 <a class="footer__menu-links-a" href="index.html"
                   >Strona główna</a
                 >
               </li>
               <li>
+                <i class="fas fa-caret-right"></i>
                 <a class="footer__menu-links-a" href="nordic-walking.html"
                   >Wypoczynek z Nordic Walking</a
                 >
               </li>
               <li>
+                <i class="fas fa-caret-right"></i>
                 <a class="footer__menu-links-a" href="terapia-holistyczna.html"
                   >Terapia holistyczna</a
                 >
               </li>
               <li>
+                <i class="fas fa-caret-right"></i>
                 <a class="footer__menu-links-a" href="akupunktura.html"
                   >Akupunktura</a
                 >
               </li>
               <li>
+                <i class="fas fa-caret-right"></i>
                 <a class="footer__menu-links-a" href="warsztaty.html"
                   >Warsztaty</a
                 >
               </li>
               <li>
+                <i class="fas fa-caret-right"></i>
                 <a class="footer__menu-links-a" href="kontakt.html">Kontakt</a>
               </li>
             </ul>

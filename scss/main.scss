@@ -92,17 +92,6 @@ button:hover {
   background-color: $happy-yellow;
 }
 
-.navigation ul {
-  list-style: outside none none;
-  margin: 0;
-  padding: 0;
-}
-
-.navigation ul > li {
-  display: block;
-  float: left;
-  position: relative;
-}
 
 .bold {
   font-weight: bold;
@@ -219,10 +208,6 @@ button:hover {
     margin-left: 0;
     margin-top: 3px;
   }
-
-  &__logo-img {
-    height: 80%;
-  }
 }
 
 .shrink-and-sticky {
@@ -237,7 +222,7 @@ button:hover {
   }
 
   .site-header__logo-img {
-    height: 90%;
+    height: 92%;
   }
 
   .mainmenu {
@@ -248,29 +233,9 @@ button:hover {
   .mainmenu ul {
     background-color: $brown-dark;
   }
-
-  .navigation__link {
-    font-size: 15px;
-  }
 }
 
-.navigation__link {
-  font-size: 14px;
-  color: $yellow;
-  display: block;
-  &--drop {
-    line-height: 1.45em;
-    font-size: 14px;
-    color: $black;
-  }
-  &--discreet {
-    color: #d08c60;
-  }
-}
 
-.navigation__link:hover {
-  color: $happy-yellow;
-}
 
 @import "scss/mainmenu.scss";
 
@@ -302,13 +267,12 @@ button:hover {
   row-gap: 1px;
   padding: 0;
   justify-content: center;
-  padding: 0;
   position: relative;
   top: 0;
 }
 .offer-article {
-  padding: 40px 40px 10px;
-  margin: 0 40px 20px;
+  padding: 40px 20px 10px;
+  margin: 0 20px 20px;
   background-color: $palegreen;
   text-align: center;
   -webkit-transition: all 0.4s ease;
@@ -317,7 +281,7 @@ button:hover {
   &__header {
   }
   &__heading {
-    font-size: 28px;
+    font-size: 24px;
     color: $whiteyellow;
   }
   &__thumb {
@@ -339,6 +303,7 @@ button:hover {
     border-radius: 3px;
     padding: 20px 60px;
     margin: 40px 0;
+    font-size: 14px;
   }
 }
 
@@ -355,7 +320,7 @@ button:hover {
 
 .about-article {
   max-width: 800px;
-  padding: 100px 20px;
+  padding: 20px 20px;
   margin: 0 auto;
   text-align: center;
 
@@ -609,7 +574,7 @@ button:hover {
       color: $rawsienna-light;
     }
   }
- 
+
   &__contact-link--mail {
     color: $brown-light;
     font-size: 1.2em;
@@ -721,6 +686,15 @@ button:hover {
   .top-header {
     display: flex;
   }
+  .offer-article {
+    &__heading {
+      font-size: 26px;
+      color: $whiteyellow;
+    }
+    &__button {
+      font-size: 18px;
+    }
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -747,6 +721,9 @@ button:hover {
   .site-header {
     height: 87px;
   }
+  .shrink-and-sticky {
+    height: 60px;
+  }
 
   .slider {
     min-height: 300px;
@@ -755,6 +732,13 @@ button:hover {
     }
     &__heading3 {
       font-size: 2.2em;
+    }
+  }
+
+  .offer-article {
+    &__heading {
+      font-size: 28px;
+      color: $whiteyellow;
     }
   }
 
@@ -866,10 +850,10 @@ button:hover {
       height: auto;
     }
   }
-
   .shrink-and-sticky {
     height: 60px;
   }
+
 
   .navigation__link {
     margin-right: 20px;
@@ -905,6 +889,10 @@ button:hover {
     &__text {
       text-align: left;
     }
+  }
+
+  .about-article {
+    padding: 80px 20px;
   }
 
   .subpage {
@@ -962,8 +950,21 @@ button:hover {
 }
 
 @media screen and (min-width: 1400px) {
+  .offer {
+    padding: 0 40px;
+  }
+
   .offer-article {
-    padding: 100px 80px;
+    padding: 100px 40px;
+    &__heading {
+      font-size: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .offer-article {
+    padding: 100px 60px;
     &__heading {
       font-size: 32px;
     }
