@@ -18,8 +18,8 @@
       <header class="top-header">
         <a
           class="top-header__link top-header__link--mail"
-          href="mailto:joanna@dompodwierzba.pl"
-          ><i class="far fa-envelope">&nbsp;&nbsp;</i>joanna@dompodwierzba.pl</a
+          href="mailto:joannaszypula1@gmail.com"
+          ><i class="far fa-envelope">&nbsp;&nbsp;</i>joannaszypula1@gmail.com</a
         >
         <a
           class="top-header__link top-header__link--tel"
@@ -29,7 +29,7 @@
       </header>
 
       <header class="site-header palegreen">
-        <div class="site-header__logo">
+          <div class="site-header__logo">
           <a href="index.html">
             <picture>
               <source
@@ -41,6 +41,7 @@
                 media="(min-width: 768px)"
               />
               <img
+                class="site-header__logo-img"
                 src="images/logo-dom-pod-wierzba-145x65.png"
                 alt="Dom Pod Wierzbą logotyp"
               />
@@ -48,7 +49,7 @@
           </a>
         </div>
 
-        <nav class="mainmenu navigation--js">
+           <nav class="mainmenu" role="navigation">
           <input class="menu-btn" type="checkbox" id="menu-btn" />
           <label class="menu-icon" for="menu-btn"
             ><span class="navicon"></span
@@ -57,18 +58,20 @@
             <li><a class="mainmenu__link" href="index.html">Home</a></li>
 
             <li class="dropdown dropdown-wrapper drop-item">
-              <a class="mainmenu__link drop-item" href="#offer">Oferta</a>
-              <ul class="drop-menu">
+              <a class="mainmenu__link drop-item" href="#" aria-haspopup="true"
+                >Oferta</a
+              >
+              <ul class="drop-menu" aria-label="submenu">
                 <li class="drop-item">
                   <a class="mainmenu__link--drop" href="nordic-walking.html"
-                    >Wypoczynek z Nordic Walking</a
+                    >Nordic <br/>Walking</a
                   >
                 </li>
                 <li class="drop-item">
                   <a
                     class="mainmenu__link--drop"
                     href="terapia-holistyczna.html"
-                    >Terapia holistyczna</a
+                    >Terapia <br/>holistyczna</a
                   >
                 </li>
                 <li class="drop-item">
@@ -92,7 +95,6 @@
                 >LGD Dobra Widawa</a
               >
             </li>
-            <!-- <div id="main-menu-marker"></div> -->
           </ul>
         </nav>
       </header>
@@ -114,13 +116,20 @@
                 alt="LGD Dobra Widawa"
               />
               <p class="subpage-article__text">
-                Firma Marzena Krajzel Dom pod Wierzbą powstała dzięki wsparciu
+                Firma Marzena Krajzel Dom Pod Wierzbą powstała dzięki wsparciu
                 Lokalnej Grupy Działania Dobra Widawa, w ramach poddziałania
                 19.2 „Wsparcie na wdrażanie operacji w ramach strategii rozwoju
                 lokalnego objętego Programem Rozwoju Obszarów Wiejskich na lata
                 2014-2020 kierowanego przez społeczność”
               </p>
-
+              <p>
+                Firma Marzena Krajzel Dom Pod Wierzbą zrealizowała projekt w
+                zakresie rozwijania działalności gospodarczej dzięki wsparciu Lokalnej Grupy Działania Dobra
+                Widawa, w ramach poddziałania 19.2 „Wsparcie na wdrażanie
+                operacji w ramach strategii rozwoju lokalnego kierowanego przez
+                społeczność” objętego Programem Rozwoju Obszarów Wiejskich na
+                lata 2014-2020.
+              </p>
               <p class="subpage-article__text--intro bold">
                 Lokalna Grupa Działania Dobra Widawa – wspieramy mieszkańców
                 naszego obszaru, działaczy społecznych, przedsiębiorców - w
@@ -153,9 +162,10 @@
         </section>
       </section>
 
-    <footer class="footer">
+      <footer class="footer">
+          <footer class="footer">
         <div class="footer__4-col">
-          <section class="footer__section">
+          <section class="footer__section off-on-mob">
             <img
               src="images/logo-dom-pod-wierzba-coffee.png"
               alt="pod pod wierzbą logotyp"
@@ -204,9 +214,9 @@
             <p>
               <a
                 class="footer__contact-link--mail"
-                href="mailto:joanna@dompodwierzba.pl"
+                href="mailto:joannaszypula1@gmail.com"
                 ><i class="far fa-envelope">&nbsp;&nbsp;</i
-                >joanna@dompodwierzba.pl</a
+                >joannaszypula1@gmail.com</a
               >
             </p>
             <p>
@@ -215,7 +225,7 @@
               >
             </p>
           </section>
-        <section class="footer__section">
+          <section class="footer__section">
             <p class="footer__social">
               <a
                 class="footer__contact-link"

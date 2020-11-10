@@ -226,6 +226,7 @@ button:hover {
 .site-header {
   width: 100vw;
   height: 72px;
+  position: fixed;
   display: flex;
   flex-flow: row;
   align-content: center;
@@ -234,28 +235,30 @@ button:hover {
   padding: 0 20px;
   opacity: 0.93;
   z-index: 10;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
   .site-header__logo {
     height: 100%;
     margin-left: 0;
-    margin-top: 3px; }
+    margin-top: 3px;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
 
 .shrink-and-sticky {
-  height: 60px;
+  height: 67px;
   position: fixed;
   top: 0;
   background: #332821; }
   .shrink-and-sticky .site-header__logo {
     height: 60px;
-    margin-top: 2px; }
+    margin-top: 1px; }
   .shrink-and-sticky .site-header__logo-img {
-    height: 92%; }
+    height: auto; }
   .shrink-and-sticky .mainmenu {
-    margin-top: 8px;
-    background-color: #332821; }
-  .shrink-and-sticky .mainmenu ul {
-    background-color: #332821; }
+    margin-top: 8px; }
+    .shrink-and-sticky .mainmenu ul,
+    .shrink-and-sticky .mainmenu li {
+      background-color: #332821; }
 
 .mainmenu {
   margin-top: 8px; }
@@ -263,7 +266,6 @@ button:hover {
 .mainmenu ul {
   margin: 0;
   padding: 0;
-  padding-bottom: 20ps;
   list-style: none;
   overflow: hidden;
   background-color: #7a8257; }
@@ -279,8 +281,7 @@ button:hover {
 .mainmenu li a {
   display: block;
   padding: 10px 16px;
-  text-decoration: none;
-  text-transform: uppercase; }
+  text-decoration: none; }
 
 .mainmenu li .mainmenu__link--drop a {
   padding: 10px 2px; }
@@ -299,7 +300,7 @@ button:hover {
   flex-direction: column;
   /* This never changes */
   align-items: flex-start;
-  width: 150px;
+  width: 115px;
   /* Allows sub buttons to stretch across button width in main-menu*/
   transition: max-height .4s, opacity .3s;
   max-height: 0;
@@ -413,8 +414,6 @@ button:hover {
     margin-top: 24px; }
   .mainmenu li {
     float: left; }
-  .mainmenu li a {
-    padding: 10px 16px; }
   .mainmenu .mainmenu-ul {
     clear: none;
     float: right;
@@ -428,13 +427,15 @@ button:hover {
   .mainmenu {
     margin-top: 48px; }
   .mainmenu li a {
-    padding: 10px 30px; } }
+    padding: 10px 20px; } }
 
 .slider {
   min-height: 270px;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease; }
   .slider__header {
     text-align: center; }
   .slider__heading2 {
@@ -445,16 +446,31 @@ button:hover {
     font-size: 2em;
     margin-top: 2px; }
 
+.fund-info {
+  background-color: white;
+  padding: 10px 20px;
+  text-align: center; }
+  .fund-info p {
+    color: #594437; }
+  .fund-info__image {
+    width: 100%;
+    max-width: 735px; }
+  .fund-info__text {
+    max-width: 800px;
+    font-size: 0.9em;
+    margin: 0 auto 30px; }
+
 .offer {
   background-color: #5a4131;
   display: block;
   grid-template-columns: repeat(4, minmax(220px, 480px));
   column-gap: 1px;
   row-gap: 1px;
-  padding: 0;
+  padding: 20px 0 0;
   justify-content: center;
   position: relative;
-  top: 0; }
+  top: 0;
+  overflow: hidden; }
 
 .offer-article {
   padding: 40px 20px 10px;
@@ -499,16 +515,15 @@ button:hover {
   padding: 20px 20px;
   margin: 0 auto;
   text-align: center; }
+  .about-article p {
+    color: #d0c2a7; }
   .about-article__heading {
     display: none;
     font-size: 3em;
-    color: #e8dabf;
     margin-bottom: 80px; }
   .about-article__text {
-    color: #e8dabf;
     text-align: left; }
   .about-article__text--intro {
-    color: #e8dabf;
     text-align: left;
     font-size: 1.2em; }
   .about-article__image {
@@ -553,17 +568,17 @@ button:hover {
 
 .contact {
   background-color: #ffcb69;
-  padding: 100px 0 0; }
+  padding: 40px 0 0; }
   .contact__header {
     text-align: center; }
   .contact__heading {
-    font-size: 32px;
+    font-size: 24px;
     color: #594437;
     margin-bottom: 40px; }
   .contact__info {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 0 100px;
+    padding: 0 0 40px;
     font-family: "Nunito Sans", serif;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 360px));
@@ -581,7 +596,7 @@ button:hover {
     font-size: 20px; }
   .contact__link {
     color: #594437;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 600; }
     .contact__link--expose {
       font-size: 1.2em;
@@ -655,19 +670,6 @@ button:hover {
   .contact-form__submit:hover {
     background: #ffb323; }
 
-.fund-info {
-  background-color: #5a4131;
-  padding: 10px 20px;
-  text-align: center; }
-  .fund-info__image {
-    width: 100%;
-    max-width: 735px; }
-  .fund-info__text {
-    max-width: 800px;
-    color: #e8dabf;
-    font-size: 0.9em;
-    margin: 0 auto 30px; }
-
 .footer {
   background-color: #332821;
   padding: 20px 0;
@@ -719,6 +721,38 @@ button:hover {
   padding: 40px 20px;
   margin: 0 auto; }
 
+.subpage--contact {
+  max-width: none !important;
+  padding: 20px 0 0 !important; }
+
+.contact__contact-info {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto 60px;
+  padding: 0 20px; }
+
+.contact__link--subpage {
+  color: #d0c2a7;
+  font-size: 1.2em;
+  font-weight: 600; }
+  .contact__link--subpage-heading {
+    color: #d08c60;
+    font-size: 2.2em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center; }
+
+.subpage-article-grid {
+  grid-template-columns: repeat(2, minmax(180px, 600px));
+  column-gap: 24px;
+  row-gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+  padding: 0 20px; }
+
+.subpage-article p {
+  color: #d0c2a7; }
+
 .subpage-article__heading {
   color: #d08c60;
   font-size: 2.2em;
@@ -733,16 +767,14 @@ button:hover {
   margin-bottom: 12px; }
 
 .subpage-article__heading3 {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-top: 30px;
   margin-bottom: 0; }
 
 .subpage-article__text {
-  color: #e8dabf;
   text-align: left; }
 
 .subpage-article__text--intro {
-  color: #e8dabf;
   text-align: left;
   font-size: 1.1em; }
 
@@ -784,7 +816,9 @@ button:hover {
     font-size: 26px;
     color: #e8dabf; }
   .offer-article__button {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .subpage-article-grid {
+    display: grid; } }
 
 @media screen and (min-width: 768px) {
   .bkgd-image {
@@ -800,9 +834,14 @@ button:hover {
   .one-third {
     max-width: 33%; }
   .site-header {
+    position: relative;
     height: 87px; }
   .shrink-and-sticky {
-    height: 60px; }
+    position: fixed;
+    height: 67px; }
+    .shrink-and-sticky .site-header__logo-img {
+      height: 100%;
+      margin-top: 4px; }
   .slider {
     min-height: 300px; }
     .slider__heading2 {
@@ -827,21 +866,24 @@ button:hover {
     font-size: 1.7em; }
   .testimonials__signature {
     font-size: 2em; }
-  .contact__heading {
-    font-size: 1.6em; }
-  .contact__info {
-    grid-column-gap: 40px; }
-  .contact__col2 {
-    text-align: left; }
-  .contact__link {
-    color: #594437; }
-    .contact__link--expose {
-      font-size: 1.5em;
-      font-weight: 600; }
-    .contact__link--alt {
-      color: #e8dabf;
-      font-size: 1.5em;
-      font-weight: 600; }
+  .contact {
+    padding: 100px 0 0; }
+    .contact__heading {
+      font-size: 30px; }
+    .contact__info {
+      padding: 0 0 100px;
+      grid-column-gap: 40px; }
+    .contact__col2 {
+      text-align: left; }
+    .contact__link {
+      color: #594437; }
+      .contact__link--expose {
+        font-size: 1.5em;
+        font-weight: 600; }
+      .contact__link--alt {
+        color: #e8dabf;
+        font-size: 1.5em;
+        font-weight: 600; }
   .footer__section {
     border-bottom: none; }
   .subpage-article__heading {
@@ -865,7 +907,9 @@ button:hover {
     float: right;
     margin-left: 40px;
     margin-bottom: 20px;
-    width: 50%; } }
+    width: 50%; }
+  .subpage--contact {
+    padding: 80px 0 0 !important; } }
 
 @media screen and (min-width: 1024px) {
   .bkgd-image {
@@ -878,7 +922,7 @@ button:hover {
     .site-header__logo-img {
       height: auto; }
   .shrink-and-sticky {
-    height: 60px; }
+    height: 67px; }
   .navigation__link {
     margin-right: 20px;
     font-size: 16px; }
@@ -939,7 +983,7 @@ button:hover {
 
 @media screen and (min-width: 1400px) {
   .offer {
-    padding: 0 40px; }
+    padding: 40px 40px; }
   .offer-article {
     padding: 100px 40px; }
     .offer-article__heading {

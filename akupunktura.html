@@ -18,8 +18,8 @@
       <header class="top-header">
         <a
           class="top-header__link top-header__link--mail"
-          href="mailto:joanna@dompodwierzba.pl"
-          ><i class="far fa-envelope">&nbsp;&nbsp;</i>joanna@dompodwierzba.pl</a
+          href="mailto:joannaszypula1@gmail.com"
+          ><i class="far fa-envelope">&nbsp;&nbsp;</i>joannaszypula1@gmail.com</a
         >
         <a
           class="top-header__link top-header__link--tel"
@@ -29,22 +29,27 @@
       </header>
 
       <header class="site-header palegreen">
-        <div class="site-header__logo">
+          <div class="site-header__logo">
           <a href="index.html">
-
             <picture>
               <source
                 srcset="images/logo-dom-pod-wierzba-230x103.png"
                 media="(min-width: 1024px)"
               />
-              <source srcset="images/logo-dom-pod-wierzba-179x80.png" media="(min-width: 768px)" />
-              <img src="images/logo-dom-pod-wierzba-145x65.png" alt="Dom Pod Wierzbą logotyp" />
+              <source
+                srcset="images/logo-dom-pod-wierzba-179x80.png"
+                media="(min-width: 768px)"
+              />
+              <img
+                class="site-header__logo-img"
+                src="images/logo-dom-pod-wierzba-145x65.png"
+                alt="Dom Pod Wierzbą logotyp"
+              />
             </picture>
-
           </a>
         </div>
 
-        <nav class="mainmenu navigation--js">
+           <nav class="mainmenu" role="navigation">
           <input class="menu-btn" type="checkbox" id="menu-btn" />
           <label class="menu-icon" for="menu-btn"
             ><span class="navicon"></span
@@ -53,18 +58,20 @@
             <li><a class="mainmenu__link" href="index.html">Home</a></li>
 
             <li class="dropdown dropdown-wrapper drop-item">
-              <a class="mainmenu__link drop-item" href="#offer">Oferta</a>
-              <ul class="drop-menu">
+              <a class="mainmenu__link drop-item" href="#" aria-haspopup="true"
+                >Oferta</a
+              >
+              <ul class="drop-menu" aria-label="submenu">
                 <li class="drop-item">
                   <a class="mainmenu__link--drop" href="nordic-walking.html"
-                    >Wypoczynek z Nordic Walking</a
+                    >Nordic <br/>Walking</a
                   >
                 </li>
                 <li class="drop-item">
                   <a
                     class="mainmenu__link--drop"
                     href="terapia-holistyczna.html"
-                    >Terapia holistyczna</a
+                    >Terapia <br/>holistyczna</a
                   >
                 </li>
                 <li class="drop-item">
@@ -88,7 +95,6 @@
                 >LGD Dobra Widawa</a
               >
             </li>
-            <!-- <div id="main-menu-marker"></div> -->
           </ul>
         </nav>
       </header>
@@ -109,97 +115,99 @@
 
             <img
               class="subpage-article__image--right round5px"
+              style="max-width: 400px"
               src="images/akupunktura-dom-pod-wierzba-pawel-dlonie.jpg"
               alt="Akupunktura jest bezpieczna"
             />
 
-          <p class="subpage-article__text">
-            Tak naprawdę nie ma znaczenia czy ktoś wierzy w akupunkturę czy
-            nie, ona i tak działa, co często widzimy w naszym gabinecie i o
-            czym świadczą opinie naszych pacjentów.
-          </p>
-
-          <p class="subpage-article__text">
-            Obecnie akupunktura obejmuje swoim zasięgiem niemal cały świat i
-            zyskuje sobie coraz więcej zwolenników zarówno wśród klientów jak
-            i lekarzy. Współczesna medycyna zachodnia, pomimo wybitnych
-            osiągnięć w dziedzinie diagnostyki i terapii, nadal jest bezradna
-            wobec wielu chorób – także takich, w których akupunktura jest w
-            stanie skutecznie pomóc.
-          </p>
-
-          <p class="subpage-article__text">
-            W wielu krajach np. w Niemczech czy Szwajcarii zabiegi akupunktury
-            są refundowane, ponieważ są tańsze od leczenia farmakologicznego,
-            a wykazują się co najmniej porównywalną skutecznością przy
-            mniejszej ilości działań niepożądanych.
-          </p>
-
-          <div class="emptyspace20"></div>
-
-          <img
-            class="subpage-article__image--left"
-            src="images/akupunktura-dom-pod-wierzba-chinskie-znaki.png"
-            alt="akupunktura po koreańsku"
-          />
-
-          <p class="subpage-article__text">
-            Choć ojczyzną akupunktury są Chiny, szybko rozpowszechniła się w
-            całym obszarze Dalekiego Wschodu. Metoda, którą my stosujemy,
-            wywodzi się z Korei i zwana jest „Than Dza, Piong Po, Piong Sa” co
-            znaczy <b>„Silna, Natychmiastowa, Piorunująca”</b>, bo często daje
-            właśnie takie efekty.
-          </p>
-
-          <div class="emptyspace40 off-on-mob"></div>
-          <div class="emptyspace40"></div>
-
-          <h2 class="subpage-article__heading2">
-            <i class="fas fa-caret-right">&nbsp;&nbsp;</i>Na czym polega i jak
-            działa akupunktura?
-          </h2>
-
-          <p class="subpage-article__text">
-            Zabieg akupunktury polega na nakłuwaniu cienkimi sterylnymi igłami
-            określonych punktów na ciele. Punkty te znajdują się wzdłuż 12
-            tzw. meridianów, czyli kanałów energetycznych zlokalizowanych w
-            ciele człowieka. Poprzez te kanały płynie energia witalna zwana
-            przez Chińczyków „Qi”. Zaburzenie przepływu energii w konkretnym
-            kanale prowadzi do patologii w organizmie.
-          </p>
-
-          <img
-            class="subpage-article__image--right round5px"
-            src="images/akupunktura-dom-pod-wierzba-meridiany-i-punkty.jpg"
-            alt="Model przebiegu meridianów w ludzkim ciele"
-          />
-
-          <p class="subpage-article__text">
-            Nakłuwanie punktów ma więc na celu przywrócenie prawidłowego
-            krążenia "Qi" i stymulowanie organów wewnętrznych człowieka.
-            Dzięki temu organizm odzyskuje równowagę i jest zdolny do powrotu
-            do zdrowia. Efekt terapeutyczny w leczeniu akupunkturą uzyskuje
-            się poprzez wykorzystanie odruchów układu nerwowego organizmu
-            klienta, co powoduje uruchomienie procesów samouzdrowienia.
-          </p>
-
-          <div class="emptyspace20 off-on-mob"></div>
-          <div class="emptyspace20"></div>
-
-          <p class="small-info">
-            <i>Artykuł pochodzi ze strony</i>
-            <a href="https://www.akademialoknath.pl/czym-jest-akupunktura/"
-              >www.akademialoknath.pl</a
-            >
-          </p>
-          <div class="emptyspace80 off-on-mob"></div>
-          <div class="emptyspace40"></div>
-
-          <div class="subpage-article__contact-card">
-            <p class="align-right">
-              Chcesz dowiedzieć się więcej o akupunkturze? Napisz lub zadzwoń:
+            <p class="subpage-article__text">
+              Tak naprawdę nie ma znaczenia czy ktoś wierzy w akupunkturę czy
+              nie, ona i tak działa, co często widzimy w naszym gabinecie i o
+              czym świadczą opinie naszych pacjentów.
             </p>
-           
+
+            <p class="subpage-article__text">
+              Obecnie akupunktura obejmuje swoim zasięgiem niemal cały świat i
+              zyskuje sobie coraz więcej zwolenników zarówno wśród klientów jak
+              i lekarzy. Współczesna medycyna zachodnia, pomimo wybitnych
+              osiągnięć w dziedzinie diagnostyki i terapii, nadal jest bezradna
+              wobec wielu chorób – także takich, w których akupunktura jest w
+              stanie skutecznie pomóc.
+            </p>
+
+            <p class="subpage-article__text">
+              W wielu krajach np. w Niemczech czy Szwajcarii zabiegi akupunktury
+              są refundowane, ponieważ są tańsze od leczenia farmakologicznego,
+              a wykazują się co najmniej porównywalną skutecznością przy
+              mniejszej ilości działań niepożądanych.
+            </p>
+
+            <div class="emptyspace20"></div>
+
+            <img
+              class="subpage-article__image--left"
+              style="max-width: 300px"
+              src="images/akupunktura-dom-pod-wierzba-chinskie-znaki.png"
+              alt="akupunktura po koreańsku"
+            />
+
+            <p class="subpage-article__text">
+              Choć ojczyzną akupunktury są Chiny, szybko rozpowszechniła się w
+              całym obszarze Dalekiego Wschodu. Metoda, którą my stosujemy,
+              wywodzi się z Korei i zwana jest „Than Dza, Piong Po, Piong Sa” co
+              znaczy <b>„Silna, Natychmiastowa, Piorunująca”</b>, bo często daje
+              właśnie takie efekty.
+            </p>
+
+            <div class="emptyspace40 off-on-mob"></div>
+            <div class="emptyspace40"></div>
+
+            <h2 class="subpage-article__heading2">
+              <i class="fas fa-caret-right">&nbsp;&nbsp;</i>Na czym polega i jak
+              działa akupunktura?
+            </h2>
+
+            <p class="subpage-article__text">
+              Zabieg akupunktury polega na nakłuwaniu cienkimi sterylnymi igłami
+              określonych punktów na ciele. Punkty te znajdują się wzdłuż 12
+              tzw. meridianów, czyli kanałów energetycznych zlokalizowanych w
+              ciele człowieka. Poprzez te kanały płynie energia witalna zwana
+              przez Chińczyków „Qi”. Zaburzenie przepływu energii w konkretnym
+              kanale prowadzi do patologii w organizmie.
+            </p>
+
+            <img
+              class="subpage-article__image--right round5px"
+              style="max-width: 400px"
+              src="images/akupunktura-dom-pod-wierzba-meridiany-i-punkty.jpg"
+              alt="Model przebiegu meridianów w ludzkim ciele"
+            />
+
+            <p class="subpage-article__text">
+              Nakłuwanie punktów ma więc na celu przywrócenie prawidłowego
+              krążenia "Qi" i stymulowanie organów wewnętrznych człowieka.
+              Dzięki temu organizm odzyskuje równowagę i jest zdolny do powrotu
+              do zdrowia. Efekt terapeutyczny w leczeniu akupunkturą uzyskuje
+              się poprzez wykorzystanie odruchów układu nerwowego organizmu
+              klienta, co powoduje uruchomienie procesów samouzdrowienia.
+            </p>
+
+            <div class="emptyspace20 off-on-mob"></div>
+            <div class="emptyspace20"></div>
+
+            <p class="small-info">
+              <i>Artykuł pochodzi ze strony</i>
+              <a href="https://www.akademialoknath.pl/czym-jest-akupunktura/"
+                >www.akademialoknath.pl</a
+              >
+            </p>
+            <div class="emptyspace80 off-on-mob"></div>
+            <div class="emptyspace40"></div>
+
+            <div class="subpage-article__contact-card">
+              <p class="align-right">
+                Chcesz dowiedzieć się więcej o akupunkturze? Napisz lub zadzwoń:
+              </p>
 
               <p class="align-right">
                 <a
@@ -220,9 +228,10 @@
         </section>
       </section>
 
-    <footer class="footer">
+      <footer class="footer">
+          <footer class="footer">
         <div class="footer__4-col">
-          <section class="footer__section">
+          <section class="footer__section off-on-mob">
             <img
               src="images/logo-dom-pod-wierzba-coffee.png"
               alt="pod pod wierzbą logotyp"
@@ -271,9 +280,9 @@
             <p>
               <a
                 class="footer__contact-link--mail"
-                href="mailto:joanna@dompodwierzba.pl"
+                href="mailto:joannaszypula1@gmail.com"
                 ><i class="far fa-envelope">&nbsp;&nbsp;</i
-                >joanna@dompodwierzba.pl</a
+                >joannaszypula1@gmail.com</a
               >
             </p>
             <p>
@@ -282,7 +291,7 @@
               >
             </p>
           </section>
-        <section class="footer__section">
+          <section class="footer__section">
             <p class="footer__social">
               <a
                 class="footer__contact-link"

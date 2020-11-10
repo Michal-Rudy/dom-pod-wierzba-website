@@ -5,7 +5,6 @@
 .mainmenu ul {
   margin: 0;
   padding: 0;
-  padding-bottom: 20ps;
   list-style: none;
   overflow: hidden;
   background-color: $palegreen;
@@ -14,6 +13,7 @@
 .mainmenu .mainmenu-ul {
   clear: both;
   max-height: 0;
+
   -webkit-transition: max-height 0.2s ease-out;
   transition: max-height 0.2s ease-out;
   -webkit-transition: background-color 0.4s ease;
@@ -24,7 +24,6 @@
   display: block;
   padding: 10px 16px;
   text-decoration: none;
-  text-transform: uppercase;
 }
 
 .mainmenu li .mainmenu__link--drop a {
@@ -46,7 +45,7 @@
     display: flex;
     flex-direction: column; /* This never changes */
     align-items: flex-start;
-    width: 150px; /* Allows sub buttons to stretch across button width in main-menu*/
+    width: 115px; /* Allows sub buttons to stretch across button width in main-menu*/
     transition: max-height .4s, opacity .3s;
     max-height: 0;
     opacity: 0;
@@ -185,9 +184,6 @@
   .mainmenu li {
     float: left;
   }
-  .mainmenu li a {
-    padding: 10px 16px;
-  }
   .mainmenu .mainmenu-ul {
     clear: none;
     float: right;
@@ -206,6 +202,6 @@
     margin-top: 48px;
   }
   .mainmenu li a {
-    padding: 10px 30px;
+    padding: 10px 20px;
   }
 }

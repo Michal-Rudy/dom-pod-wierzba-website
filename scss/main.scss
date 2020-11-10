@@ -13,6 +13,7 @@ $palegreen-light: #9b9b7a;
 
 $white: #fcf8ef; // text color
 $whiteyellow: #e8dabf; // text color on dark
+$shadeyellow: #d0c2a7; // text color on dark alt
 $whitepaleyellow: #9a8b70;
 
 $yellow: #ffcb69; // button, menu link,
@@ -91,7 +92,6 @@ button {
 button:hover {
   background-color: $happy-yellow;
 }
-
 
 .bold {
   font-weight: bold;
@@ -192,6 +192,7 @@ button:hover {
 .site-header {
   width: 100vw;
   height: 72px;
+  position: fixed;
   display: flex;
   flex-flow: row;
   align-content: center;
@@ -200,42 +201,41 @@ button:hover {
   padding: 0 20px;
   opacity: 0.93;
   z-index: 10;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 
   &__logo {
     height: 100%;
     margin-left: 0;
     margin-top: 3px;
+    -webkit-transition: all 0.6s ease;
+    transition: all 0.6s ease;
   }
 }
 
 .shrink-and-sticky {
-  height: 60px;
+  height: 67px;
   position: fixed;
   top: 0;
   background: $brown-dark;
 
   .site-header__logo {
     height: 60px;
-    margin-top: 2px;
+    margin-top: 1px;
   }
 
   .site-header__logo-img {
-    height: 92%;
+    height: auto;
   }
 
   .mainmenu {
     margin-top: 8px;
-    background-color: $brown-dark;
-  }
-
-  .mainmenu ul {
-    background-color: $brown-dark;
+    ul,
+    li {
+      background-color: $brown-dark;
+    }
   }
 }
-
-
 
 @import "scss/mainmenu.scss";
 
@@ -244,6 +244,9 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+
   &__header {
     text-align: center;
   }
@@ -259,16 +262,36 @@ button:hover {
   }
 }
 
+.fund-info {
+  background-color: white;
+  padding: 10px 20px;
+  text-align: center;
+  p {
+    color: $brown-alt;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 735px;
+  }
+  &__text {
+    max-width: 800px;
+    font-size: 0.9em;
+    margin: 0 auto 30px;
+  }
+}
+
 .offer {
   background-color: $brown;
   display: block;
   grid-template-columns: repeat(4, minmax(220px, 480px));
   column-gap: 1px;
   row-gap: 1px;
-  padding: 0;
+  padding: 20px 0 0;
   justify-content: center;
   position: relative;
   top: 0;
+  overflow: hidden;
 }
 .offer-article {
   padding: 40px 20px 10px;
@@ -324,18 +347,19 @@ button:hover {
   margin: 0 auto;
   text-align: center;
 
+  p {
+    color: $shadeyellow;
+  }
+
   &__heading {
     display: none;
     font-size: 3em;
-    color: $whiteyellow;
     margin-bottom: 80px;
   }
   &__text {
-    color: $whiteyellow;
     text-align: left;
   }
   &__text--intro {
-    color: $whiteyellow;
     text-align: left;
     font-size: 1.2em;
   }
@@ -375,7 +399,6 @@ button:hover {
     max-width: 900px;
     text-align: center;
   }
-
   &__icon {
     color: $whiteyellow;
     font-size: 2.4em;
@@ -394,20 +417,20 @@ button:hover {
 
 .contact {
   background-color: $yellow;
-  padding: 100px 0 0;
+  padding: 40px 0 0;
 
   &__header {
     text-align: center;
   }
   &__heading {
-    font-size: 32px;
+    font-size: 24px;
     color: $brown-alt;
     margin-bottom: 40px;
   }
   &__info {
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 0 100px;
+    padding: 0 0 40px;
     font-family: "Nunito Sans", serif;
     display: grid;
 
@@ -431,7 +454,7 @@ button:hover {
   }
   &__link {
     color: $brown-alt;
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: 600;
 
     &--expose {
@@ -520,25 +543,6 @@ button:hover {
   }
 }
 
-.fund-info {
-  background-color: $brown;
-  padding: 10px 20px;
-  text-align: center;
-
-  &__heading {
-  }
-  &__image {
-    width: 100%;
-    max-width: 735px;
-  }
-  &__text {
-    max-width: 800px;
-    color: $whiteyellow;
-    font-size: 0.9em;
-    margin: 0 auto 30px;
-  }
-}
-
 .footer {
   background-color: $brown-dark;
   padding: 20px 0;
@@ -609,7 +613,43 @@ button:hover {
   margin: 0 auto;
 }
 
+.subpage--contact {
+  max-width: none !important;
+  padding: 20px 0 0 !important;
+}
+
+.contact__contact-info {
+  max-width: 900px;
+  text-align: center;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+
+.contact__link--subpage {
+  color: $shadeyellow;
+  font-size: 1.2em;
+  font-weight: 600;
+  &-heading {
+    color: $rawsienna;
+    font-size: 2.2em;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+}
 .subpage-article {
+  &-grid {
+    grid-template-columns: repeat(2, minmax(180px, 600px));
+    column-gap: 24px;
+    row-gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+  }
+  p {
+    color: $shadeyellow;
+  }
   &__heading {
     color: $rawsienna;
     font-size: 2.2em;
@@ -625,17 +665,15 @@ button:hover {
   }
 
   &__heading3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin-top: 30px;
     margin-bottom: 0;
   }
 
   &__text {
-    color: $whiteyellow;
     text-align: left;
   }
   &__text--intro {
-    color: $whiteyellow;
     text-align: left;
     font-size: 1.1em;
   }
@@ -695,6 +733,12 @@ button:hover {
       font-size: 18px;
     }
   }
+  .subpage-article {
+    &-grid {
+      display: grid;
+    }
+  }
+
 }
 
 @media screen and (min-width: 768px) {
@@ -719,10 +763,17 @@ button:hover {
   }
 
   .site-header {
+    position: relative;
     height: 87px;
   }
   .shrink-and-sticky {
-    height: 60px;
+    position: fixed;
+    height: 67px;
+    
+    .site-header__logo-img {
+      height: 100%;
+      margin-top: 4px;
+    }
   }
 
   .slider {
@@ -771,10 +822,12 @@ button:hover {
   }
 
   .contact {
+    padding: 100px 0 0;
     &__heading {
-      font-size: 1.6em;
+      font-size: 30px;
     }
     &__info {
+      padding: 0 0 100px;
       grid-column-gap: 40px;
     }
     &__col2 {
@@ -800,6 +853,7 @@ button:hover {
       border-bottom: none;
     }
   }
+
 
   .subpage-article {
     &__heading {
@@ -833,6 +887,10 @@ button:hover {
       width: 50%;
     }
   }
+
+  .subpage--contact {
+    padding: 80px 0 0 !important;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -851,9 +909,8 @@ button:hover {
     }
   }
   .shrink-and-sticky {
-    height: 60px;
+    height: 67px;
   }
-
 
   .navigation__link {
     margin-right: 20px;
@@ -951,7 +1008,7 @@ button:hover {
 
 @media screen and (min-width: 1400px) {
   .offer {
-    padding: 0 40px;
+    padding: 40px 40px;
   }
 
   .offer-article {
