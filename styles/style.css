@@ -206,6 +206,9 @@ button:hover {
 .main {
   overflow: hidden; }
 
+.site-content {
+  margin-top: 72px; }
+
 .top-header {
   display: none;
   flex-flow: row nowrap;
@@ -723,7 +726,7 @@ button:hover {
 
 .subpage--contact {
   max-width: none !important;
-  padding: 20px 0 0 !important; }
+  padding: 60px 0 0 !important; }
 
 .contact__contact-info {
   max-width: 900px;
@@ -786,6 +789,10 @@ button:hover {
   margin-bottom: 10px;
   width: 100%; }
 
+.subpage-article__image--left-30 {
+  margin-bottom: 10px;
+  width: 100%; }
+
 .subpage-article__page {
   margin: 40px 0; }
 
@@ -818,7 +825,12 @@ button:hover {
   .offer-article__button {
     font-size: 18px; }
   .subpage-article-grid {
-    display: grid; } }
+    display: grid; }
+  .subpage-article__image--left-30 {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 20px;
+    width: 30%; } }
 
 @media screen and (min-width: 768px) {
   .bkgd-image {
@@ -842,6 +854,8 @@ button:hover {
     .shrink-and-sticky .site-header__logo-img {
       height: 100%;
       margin-top: 4px; }
+  .site-content {
+    margin-top: 2px; }
   .slider {
     min-height: 300px; }
     .slider__heading2 {

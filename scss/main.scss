@@ -168,6 +168,10 @@ button:hover {
   overflow: hidden;
 }
 
+.site-content {
+  margin-top: 72px;
+}
+
 .top-header {
   display: none;
   flex-flow: row nowrap;
@@ -615,7 +619,7 @@ button:hover {
 
 .subpage--contact {
   max-width: none !important;
-  padding: 20px 0 0 !important;
+  padding: 60px 0 0 !important;
 }
 
 .contact__contact-info {
@@ -687,6 +691,11 @@ button:hover {
     margin-bottom: 10px;
     width: 100%;
   }
+
+  &__image--left-30 {
+    margin-bottom: 10px;
+    width: 100%;
+  }
 }
 
 .subpage-article__page {
@@ -737,6 +746,12 @@ button:hover {
     &-grid {
       display: grid;
     }
+    &__image--left-30 {
+      float: left;
+      margin-right: 40px;
+      margin-bottom: 20px;
+      width: 30%;
+    }
   }
 
 }
@@ -774,6 +789,10 @@ button:hover {
       height: 100%;
       margin-top: 4px;
     }
+  }
+
+  .site-content {
+    margin-top: 2px;
   }
 
   .slider {
