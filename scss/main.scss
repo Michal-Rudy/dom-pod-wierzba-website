@@ -71,6 +71,10 @@ p {
   font-size: 0.9em;
 }
 
+.p-xlarge {
+  font-size: 1.6em;
+}
+
 a {
   text-decoration: none;
   color: $yellow;
@@ -96,6 +100,12 @@ button:hover {
 .bold {
   font-weight: bold;
 }
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+}
+
 .emptyspace10 {
   min-height: 10px;
   height: 10px;
@@ -305,8 +315,6 @@ button:hover {
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 
-  &__header {
-  }
   &__heading {
     font-size: 24px;
     color: $whiteyellow;
@@ -629,6 +637,27 @@ button:hover {
   padding: 0 20px;
 }
 
+.subpage--on-white {
+  background-color: White;
+  p {
+    color: $brown-alt !important;
+  }
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    color: $brown-alt;
+    font-size: 0.9em;
+    margin-bottom: 4px;
+  }
+  .link-yellow {
+    color: $happy-yellow;
+  }
+  .link-brown {
+    color: $brown-alt;
+  }
+}
 
 .contact__link--subpage {
   color: $shadeyellow;
@@ -654,9 +683,10 @@ button:hover {
   p {
     color: $shadeyellow;
   }
+
   &__heading {
     color: $rawsienna;
-    font-size: 2.2em;
+    font-size: 1.8em;
     margin-top: 0;
     margin-bottom: 20px;
   }
@@ -679,7 +709,7 @@ button:hover {
   }
   &__text--intro {
     text-align: left;
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
 
   &__image--left {
@@ -692,16 +722,15 @@ button:hover {
     width: 100%;
   }
 
+  
   &__image--left-30 {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     width: 100%;
   }
 }
 
 .subpage-article__page {
   margin: 40px 0;
-  &--style2 {
-  }
 }
 
 .subpage-card {
@@ -753,7 +782,6 @@ button:hover {
       width: 30%;
     }
   }
-
 }
 
 @media screen and (min-width: 768px) {
@@ -784,7 +812,7 @@ button:hover {
   .shrink-and-sticky {
     position: fixed;
     height: 67px;
-    
+
     .site-header__logo-img {
       height: 100%;
       margin-top: 4px;
@@ -873,10 +901,9 @@ button:hover {
     }
   }
 
-
   .subpage-article {
     &__heading {
-      font-size: 3em;
+      font-size: 2.4em;
       margin-top: 20px;
       margin-bottom: 60px;
     }
@@ -909,6 +936,13 @@ button:hover {
 
   .subpage--contact {
     padding: 80px 0 0 !important;
+  }
+  .subpage--on-white {
+    li {
+      color: $brown-alt;
+      font-size: 1.1em;
+      margin-bottom: 8px;
+    }
   }
 }
 
@@ -978,7 +1012,7 @@ button:hover {
 
   .subpage-article {
     &__heading {
-      font-size: 3.3em;
+      font-size: 2.7em;
       margin-top: 20px;
       margin-bottom: 40px;
     }
@@ -991,7 +1025,7 @@ button:hover {
     }
     &__text--intro {
       text-align: justify;
-      font-size: 1.3em;
+      font-size: 1.4em;
     }
   }
   .footer {
@@ -1022,6 +1056,13 @@ button:hover {
 
   .offer-article {
     padding: 60px 40px;
+  }
+  .subpage--on-white {
+    li {
+      color: $brown-alt;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
   }
 }
 

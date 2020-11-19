@@ -118,6 +118,9 @@ p {
   margin: 8px 0 12px;
   font-size: 0.9em; }
 
+.p-xlarge {
+  font-size: 1.6em; }
+
 a {
   text-decoration: none;
   color: #ffcb69; }
@@ -137,6 +140,10 @@ button:hover {
 
 .bold {
   font-weight: bold; }
+
+.center {
+  text-align: center;
+  margin: 0 auto; }
 
 .emptyspace10 {
   min-height: 10px;
@@ -734,6 +741,21 @@ button:hover {
   margin: 0 auto 60px;
   padding: 0 20px; }
 
+.subpage--on-white {
+  background-color: White; }
+  .subpage--on-white p {
+    color: #594437 !important; }
+  .subpage--on-white ul {
+    margin-top: 20px; }
+  .subpage--on-white li {
+    color: #594437;
+    font-size: 0.9em;
+    margin-bottom: 4px; }
+  .subpage--on-white .link-yellow {
+    color: #ffb323; }
+  .subpage--on-white .link-brown {
+    color: #594437; }
+
 .contact__link--subpage {
   color: #d0c2a7;
   font-size: 1.2em;
@@ -758,7 +780,7 @@ button:hover {
 
 .subpage-article__heading {
   color: #d08c60;
-  font-size: 2.2em;
+  font-size: 1.8em;
   margin-top: 0;
   margin-bottom: 20px; }
 
@@ -779,7 +801,7 @@ button:hover {
 
 .subpage-article__text--intro {
   text-align: left;
-  font-size: 1.1em; }
+  font-size: 1.2em; }
 
 .subpage-article__image--left {
   margin-bottom: 10px;
@@ -790,7 +812,7 @@ button:hover {
   width: 100%; }
 
 .subpage-article__image--left-30 {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   width: 100%; }
 
 .subpage-article__page {
@@ -901,7 +923,7 @@ button:hover {
   .footer__section {
     border-bottom: none; }
   .subpage-article__heading {
-    font-size: 3em;
+    font-size: 2.4em;
     margin-top: 20px;
     margin-bottom: 60px; }
   .subpage-article__heading2 {
@@ -923,7 +945,11 @@ button:hover {
     margin-bottom: 20px;
     width: 50%; }
   .subpage--contact {
-    padding: 80px 0 0 !important; } }
+    padding: 80px 0 0 !important; }
+  .subpage--on-white li {
+    color: #594437;
+    font-size: 1.1em;
+    margin-bottom: 8px; } }
 
 @media screen and (min-width: 1024px) {
   .bkgd-image {
@@ -965,7 +991,7 @@ button:hover {
     padding: 100px 20px;
     max-width: 1000px; }
   .subpage-article__heading {
-    font-size: 3.3em;
+    font-size: 2.7em;
     margin-top: 20px;
     margin-bottom: 40px; }
   .subpage-article__heading2 {
@@ -975,7 +1001,7 @@ button:hover {
     text-align: justify; }
   .subpage-article__text--intro {
     text-align: justify;
-    font-size: 1.3em; }
+    font-size: 1.4em; }
   .footer {
     padding: 60px 0; } }
 
@@ -993,7 +1019,11 @@ button:hover {
     .slider__heading3 {
       font-size: 3.7em; }
   .offer-article {
-    padding: 60px 40px; } }
+    padding: 60px 40px; }
+  .subpage--on-white li {
+    color: #594437;
+    font-size: 1.2em;
+    margin-bottom: 10px; } }
 
 @media screen and (min-width: 1400px) {
   .offer {
